@@ -1,3 +1,3 @@
 # onyyx.github.io
-First Website
-Please bear with me!
+MY WEBSITE POGGERS
+Please bear with me I'm an object oriented dev mostly!!
