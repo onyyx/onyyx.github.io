@@ -4,33 +4,73 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Onyx' Gifs!</title>
+    <title>OnyxRecon Gifs!</title>
     <link rel="stylesheet" href="../../stylesheets/styles.css">
     <link rel="stylesheet" href="../../stylesheets/github-dark.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="../../javascripts/respond.js"></script>
+
+    <!--
+            Gifs page
+    -->
 
     <style>
         h3 {
             text-align: center;
             color: #b8c2f7
         }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        #myInput {
+            background-position: 10px 12px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+
+        #myUL {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            #myUL li a {
+                border: 1px solid #ddd;
+                margin-top: -1px; /* Prevent double borders */
+                background-color: #f6f6f6;
+                padding: 12px;
+                text-decoration: none;
+                font-size: 18px;
+                color: black;
+                display: block
+            }
+
+                #myUL li a:hover:not(.header) {
+                    background-color: #eee;
+                }
     </style>
 
 </head>
 <body>
-
+    <!--
     <div id="header">
         <nav>
             <li class="fork"><a href="https://github.com/onyyx">View On GitHub</a></li>
         </nav>
-    </div><!-- end header -->
+    </div>
+    end header -->
 
     <div class="wrapper">
         <section>
 
             <div id="title">
-                <h1>OnyxRecon</h1>
+                <h1 text-align: center>OnyxRecon</h1>
                 <h3 text-align: center>Play In Perpetuum</h3>
 
                 <div style="text-align: center; flex-flow: row wrap; align-items: center;">
@@ -115,13 +155,49 @@
 
                 <p>work in progress ;p</p>
 
+                <!--<img src="https://media.giphy.com/media/JVGLHEuzbVviw/giphy.gif" alt="funny GIF" width="100%">
+                <iframe src="https://giphy.com/embed/83IKrJbUb3yM0" width="480" height="234" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/snuggle-love-black-and-white-83IKrJbUb3yM0">via GIPHY</a></p>-->
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for GIFs.." title="Type in a show name or character or reference">
+
+                <ul id="myUL">
+                    <li><a href="#">Brooklyn Nine-Nine - B99 - Jake - Sad Robot Noises</a><img src=".../.../gifs/101SadRobot.gif" alt="Jake makes sad robot noises" width="100%"></li>
+
+                    <li><a href="#">Adele zippity</a></li>
+                    <li><a href="#">Agnes</a></li>
+
+                    <li><a href="#">Billy</a></li>
+                    <li><a href="#">Bob</a></li>
+
+                    <li><a href="#">Calvin</a></li>
+                    <li><a href="#">Christina</a></li>
+                    <li><a href="#">Cindy</a></li>
+                </ul>
+
+                <script>
+                    function myFunction() {
+                        var input, filter, ul, li, a, i, txtValue;
+                        input = document.getElementById("myInput");
+                        filter = input.value.toUpperCase();
+                        ul = document.getElementById("myUL");
+                        li = ul.getElementsByTagName("li");
+                        for (i = 0; i < li.length; i++) {
+                            a = li[i].getElementsByTagName("a")[0];
+                            txtValue = a.textContent || a.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                li[i].style.display = "";
+                            } else {
+                                li[i].style.display = "none";
+                            }
+                        }
+                    }
+                </script>
 
             </div>
 
-        </section>
-    </div>
+            </section>
+        </div>
 
 
 
-</body>
-</html>
+    </body>
+    </html>
