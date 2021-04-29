@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Sponsored Stream</title>
+    <link rel="stylesheet" href="../../stylesheets/styles.css">
+    <link rel="stylesheet" href="../../stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="../../javascripts/respond.js"></script>
+
+    <!--
+            Gifs page
+    -->
+
+    <style>
+        body {
+            background-color: #00B140;
+            width: 97%;
+            vertical-align: middle;
+            opacity: 1.0;
+        }
+        h3 {
+            text-align: center;
+            color: #b8c2f7;
+        }
+
+        .wrapper {
+            margin-left: 14px;
+            margin-right: 14px;
+            max-width: 95%;
+        }
+
+        section {
+            margin-top: 0px;
+            max-width: 100%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: left;
+            color: #6441A4;
+        }
+
+        header a { 
+            font-size: 72px;
+            color: #6441A4;
+        }
+
+        #gifs {
+            margin: 12px;
+        }
+
+        #header {
+            padding: 0;
+            margin: 0;
+        }
+
+        #myInput {
+            background-image: url('https://www.w3schools.com/css/searchicon.png');
+            background-position: 10px 12px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #143a51;
+            margin-bottom: 12px;
+        }
+
+        #myUL {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #myUL li a {
+            border: 1px solid #7d7660;
+            margin-top: -1px; /* Prevent double borders */
+            background-color: #33363b;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #e4dcc7;
+            display: block;
+        }
+
+        #myUL li a:hover:not(.header) {
+            background-color: #7d7660;
+        }
+
+        #gifs button {
+            border: none;
+            color: #009637;
+            background-color: #009637;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!--
+    <div id="header">
+        <nav>
+            <li class="fork"><a href="https://github.com/onyyx">View On GitHub</a></li>
+        </nav>
+    </div>
+    end header -->
+
+    <div class="wrapper">
+        <section>
+
+            <div id="gifs">
+                <input type="text" id="myInput" placeholder="Enter link:" title="linkadoo">
+
+                <!-- NUMBER 1 -->
+                <button id="myBtn" onclick="sponsorOne()"></button>
+                <div id="orgOne">
+                    <a href="#">  <br> <img id="one" src="https://www.htmlcsscolor.com/preview/32x32/00B140.png" width=200> </a>
+                    <br>
+                </div>
+
+                <!-- NUMBER 2 -->
+                <button id="myBtn" onclick="sponsorTwo()"></button>
+                <div id="orgTwo">
+                    <a href="#">  <br> <img id="two" src="https://www.htmlcsscolor.com/preview/32x32/00B140.png" width=200> </a>
+                    <br>
+                </div>
+
+                <!-- NUMBER 3 -->
+                <button id="myBtn" onclick="sponsorThree()"></button>
+                <div id="orgThree">
+                    <a href="#">  <br> <img id="three" src="https://www.htmlcsscolor.com/preview/32x32/00B140.png" width=200> </a>
+                    <br>
+                </div>
+
+
+
+
+                <!-- all green color 00B140 -->
+                <!-- altgreen color 009637 -->
+                <!-- add item https://cdn.betterttv.net/emote/6088355039b5010444d073aa/3x.png -->
+                <script>
+                    function sponsorOne() {
+                        var input = document.getElementById("myInput").value.toLowerCase();
+                        document.getElementById("one").src = input;
+                        setTimeout(function () { document.getElementById("one").src = "https://www.htmlcsscolor.com/preview/32x32/00B140.png" }, 900000);
+                    }
+                </script>
+                <script>
+                    function sponsorTwo() {
+                        var input = document.getElementById("myInput").value.toLowerCase();
+                        document.getElementById("two").src = input;
+                        setTimeout(function () { document.getElementById("two").src = "https://www.htmlcsscolor.com/preview/32x32/00B140.png" }, 900000);
+                    }
+                </script>
+                <script>
+                    function sponsorThree() {
+                        var input = document.getElementById("myInput").value.toLowerCase();
+                        document.getElementById("three").src = input;
+                        setTimeout(function () { document.getElementById("three").src = "https://www.htmlcsscolor.com/preview/32x32/00B140.png" }, 900000);
+                    }
+                </script>
+
+            </div>
+
+</section>
+    </div>
+
+
+
+</body>
+    </html>
