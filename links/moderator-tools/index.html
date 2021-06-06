@@ -1,0 +1,164 @@
+﻿﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Mod Command Tools</title>
+    <!--
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+
+    <!--
+        Main Github page for onyxrecon
+    -->
+
+    <style>
+        h3 {
+            text-align: center;
+            color: #b8c2f7
+        }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+
+
+<body>
+    <h1>
+        Table for Commands
+    </h1>
+
+    <h4>
+        StreamElements: on the left side hit Dashboard
+        links for bots each have their page: add, add supermods, switch to other streamers bot to add commands
+    </h4>
+
+    <h2 id="basicstitle">Basic Command Structures</h2>
+    <h2 id="basicstitle">add !enable, basic command structure</h2>
+    <table id="basics">
+        <tr>
+            <th>Command</th>
+            <th>Input</th>
+            <th>Result</th>
+            <th>StreamElements</th>
+            <th>Nightbot</th>
+            <th>Streamlabs</th>
+        </tr>
+        <tr>
+            <td>Add command</td>
+            <td>!test</td>
+            <td>"YES I AM HERE!"</td>
+            <td>!command add !test YES I AM HERE!</td>
+            <td>!commands add !test YES I AM HERE!</td>
+            <td>!addcommand !test YES I AM HERE!</td>
+        </tr>
+        <tr>
+            <td>Edit command</td>
+            <td>!test</td>
+            <td>from "YES I AM HERE!" to "bot is running"</td>
+            <td>!command edit !test bot is running</td>
+            <td>!commands edit !test bot is running</td>
+            <td>!editcommand !test bot is running</td>
+        </tr>
+        <tr>
+            <td>Delete command</td>
+            <td>!test</td>
+            <td>From "YES I AM HERE!" to no response</td>
+            <td>!command delete !test</td>
+            <td>!commands delete !test</td>
+            <td>!removecommand !test</td>
+        </tr>
+    </table>
+
+    <h2 id="linksstitle">Important Links</h2>
+    <table id="links">
+        <tr>
+            <th>Item</th>
+            <th>StreamElements</th>
+            <th>Nightbot</th>
+            <th>Streamlabs</th>
+        </tr>
+        <tr>
+            <td>Links to variable pages</td>
+            <td><a href="https://streamelements.com/dashboard/bot/command-variables">SE variable guide</a></td>
+            <td><a href="https://docs.nightbot.tv/commands/variableslist">Nightbot variable guide</a></td>
+            <td><a href="https://streamlabs.com/dashboard#/cloudbot/commands/variables">Slobs variable guide</a></td>
+        </tr>
+        <tr>
+            <td>Links to command pages</td>
+            <td><a href="https://streamelements.com/STREAMERS-TWITCH-NAME-HERE/commands">streamelements.com/STREAMERS-TWITCH-NAME-HERE/commands</a></td>
+            <td><a href="https://nightbot.tv/t/STREAMERS-TWITCH-NAME-HERE/commands">nightbot.tv/t/STREAMERS-TWITCH-NAME-HERE/commands</a></td>
+            <td><a href="https://streamlabs.com/dashboard#/cloudbot/commands/custom">Slobs custom commands</a></td>
+        </tr>
+        <tr>
+            <td>Default commands</td>
+            <td><a href="https://streamelements.com/dashboard/bot-commands/default-commands">SE default commands</a></td>
+            <td><a href="https://docs.nightbot.tv/commands/commandlist">Nightbot default commands</a></td>
+            <td><a href="https://streamlabs.com/dashboard#/cloudbot/commands/default">Slobs default commands</a></td>
+        </tr>
+    </table>
+
+    <h2 id="variablestitle">Basic Variable Usage</h2>
+    <table id="variables">
+        <tr>
+            <th>Variable</th>
+            <th>Input</th>
+            <th>Result</th>
+            <th>StreamElements</th>
+            <th>Nightbot</th>
+            <th>Streamlabs</th>
+        </tr>
+        <tr>
+            <td>Links to variable pages</td>
+            <td>ask for something</td>
+            <td>respond with a specific variable</td>
+            <td><a href="https://streamelements.com/dashboard/bot/command-variables">SE variable guide</a></td>
+            <td>!commands add !test YES I AM HERE!</td>
+            <td>!addcommand !test YES I AM HERE!</td>
+        </tr>
+        <tr>
+            <td>Basic variable structure</td>
+            <td>onyx: !test</td>
+            <td>"I am here @onyx"</td>
+            <td>!command add !test YES I AM HERE!</td>
+            <td>!commands add !test YES I AM HERE!</td>
+            <td>!addcommand !test YES I AM HERE!</td>
+        </tr>
+        <tr>
+            <td>Respond to user with @</td>
+            <td>onyx: !test</td>
+            <td>"I am here @onyx"</td>
+            <td>!command add !test YES I AM HERE!</td>
+            <td>!commands add !test YES I AM HERE!</td>
+            <td>!addcommand !test YES I AM HERE!</td>
+        </tr>
+    </table>
+
+    <h2 id="toolstitle">Links to additional tools</h2>
+    <table id="tools">
+        <tr>
+            <th>Tool</th>
+            <th>What it does</th>
+            <th>How it can be used</th>
+        </tr>
+        <tr>
+            <td><a href="https://emojipedia.org/">Emojipedia</a></td>
+            <td>Search and find emojis to use in chat</td>
+            <td>🏳️‍🌈 Paste 🥰 them ✨ into 🥺 commands 🎸 for extra style and emphasis. Can use to show off streamers interests and identity. Remember humans are visual, and emoji users have more sex ;P</td>
+        </tr>
+    </table>
+
+    <h2 id="infotitle">more how-to</h2>
+    <table id="info">
+        <tr>
+            <th>adding stuff</th>
+        </tr>
+        <tr>
+            <td><a href="https://emojipedia.org/">in-page-link to pictures of how to add supermod etc</a></td>
+        </tr>
+    </table>
+
+</body>
+</html>
