@@ -9,41 +9,108 @@
     <link rel="stylesheet" href="stylesheets/github-dark.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="javascripts/respond.js"></script>
-
+    
     <!--
         Main Github page for onyxrecon
     -->
 
+
+
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /*caps*/
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');/*table titles*/
         /* style for tables */
         th { /* style for main parts */
-            background-color: #04AA6D;
+            background-color: #4B644A;
             color: white;
+            font-family: 'Lato', sans-serif;
+            letter-spacing: 2px;
         }
         th, td {
-            border: 1px solid #ddd;
-            padding: 12px 7px 12px 3px;
+            border: 1px solid #49393B;
+            padding: 8px 7px 8px 3px; /*top right bot left*/
+            min-width: 140px;
         }
         table { /* collapses dual lines into 1 border line */
             border-collapse: collapse;
         }
         tr:nth-child(even) { /*horizontal stripes */
-            background-color: #f2f2f2;
+            background-color: #edebde;
+        }
+        tr:nth-child(odd) { /*horizontal stripes */
+            background-color: #E8EBED;
+        }
+
+        /*basic colors*/
+        #basics td:nth-child(2), th:nth-child(2) {
+            max-width: 100px;
+            min-width:10px;
         }
         #basics td:nth-child(4) {
-            background-color: #bceb77;
+            background-color: #ACD7EC;
+        }
+        #basics tr:nth-child(even) td:nth-child(4) {
+            background-color: #8fc1d9;
         }
         #basics td:nth-child(5) {
-            background-color: #90c8f2;
+            background-color: #D4DF9E;
+        }
+        #basics tr:nth-child(even) td:nth-child(5) {
+            background-color: #c0ce7f;
         }
         #basics td:nth-child(6) {
-            background-color: #e29cef;
+            background-color: #BD9391;
+        }
+        #basics tr:nth-child(even) td:nth-child(6) {
+            background-color: #b17977;
+        }
+        /*variables colors*/
+        #links td,th{
+            min-width: 150px;
+            max-width: 325px;
+        }
+        #links td:nth-child(2) {
+            background-color: #ACD7EC;
+        }
+
+        #links tr:nth-child(even) td:nth-child(2) {
+            background-color: #8fc1d9;
+        }
+
+        #links td:nth-child(3) {
+            background-color: #D4DF9E;
+        }
+
+        #links tr:nth-child(even) td:nth-child(3) {
+            background-color: #c0ce7f;
+        }
+
+        #links td:nth-child(4) {
+            background-color: #BD9391;
+        }
+
+        #links tr:nth-child(even) td:nth-child(4) {
+            background-color: #b17977;
         }
 
         /* style for headers */
         h3 {
             text-align: center;
             color: #b8c2f7
+        }
+        h2 {
+            font-family: 'Bebas Neue', cursive;
+            letter-spacing: 2.5px;
+            word-spacing: 4px;
+            font-size: 44px;
+            margin-bottom: 0px;
+            color: #DEE2E6;
+        }
+
+        /*background and text*/
+        body {
+            background-color: #212529;
+            /* text: #1a1a1a;*/
         }
     </style>
 
@@ -52,8 +119,8 @@
 
 
 <body>
-    <h1>
-        <!--Table for Commands
+    <h2>Guide</h2>
+    <!--Table for Commands
     </h1>
 
     <h4>
@@ -65,10 +132,11 @@
 
 
 
-    <h2 id="basicstitle">Basic Command Structures</h2>
-    <h2 id="basicstitle">add !enable, basic command structure</h2>
+    <h3 id="basicstitle">Command Tables</h3>
+
     <!-- div to allow for formatting on mobile for tables-->
-    <div style="overflow-x: auto;">
+    <div id="basicsdiv" style="overflow-x: auto;">
+        <h2 id="basicstitle">The Basics</h2>
         <table id="basics">
             <tr>
                 <th>Command</th>
@@ -97,7 +165,7 @@
             <tr>
                 <td>Delete command</td>
                 <td>!test</td>
-                <td>From "YES I AM HERE!" to no response</td>
+                <td>From "bot is running" to no response</td>
                 <td>!command delete !test</td>
                 <td>!commands delete !test</td>
                 <td>!removecommand !test</td>
@@ -110,102 +178,122 @@
                 <td>not possible afaik</td>
                 <td>the documentation says "!enable" but idk if its possible through chat</td>
             </tr>
+            <tr>
+                <td>Respond to a user/get a username</td>
+                <td>onyx: !fight JLaw</td>
+                <td>onyx fought JLaw</td>
+                <td>!command add !fight ${user} fought ${touser} <br />-$ and curly brackets!-<br />-can do user.name for lowercase-</td>
+                <td>!commands add !fight $(user) fought $(touser)<br />-$ and parentheses!-</td>
+                <td>!addcommand !fight {channel.name} fought {target.name}<br />-curly brackets!-<br />-names go lowercase-</td>
+            </tr>
         </table>
     </div>
 
-    <h2 id="linksstitle">Important Links</h2>
-    <table id="links">
-        <tr>
-            <th>Item</th>
-            <th> <img src="https://cdn.streamelements.com/static/logo/logo_red.png" width=20> StreamElements</th>
-            <th><img src="https://nightbot.tv/assets/images/text-logo.png" width=60> NightBot</th>
-            <th><img src="https://cdn.streamlabs.com/static/imgs/streamlabs-logos/favicon/favicon.png" width=20> Streamlabs</th>
-        </tr>
-        <tr>
-            <td>Links to variable pages</td>
-            <td><a href="https://streamelements.com/dashboard/bot/command-variables">SE variable guide</a></td>
-            <td><a href="https://docs.nightbot.tv/commands/variableslist">Nightbot variable guide</a></td>
-            <td><a href="https://streamlabs.com/dashboard#/cloudbot/commands/variables">Slobs variable guide</a></td>
-        </tr>
-        <tr>
-            <td>Links to command pages</td>
-            <td><a href="https://streamelements.com/STREAMERS-TWITCH-NAME-HERE/commands">streamelements.com/STREAMERS-TWITCH-NAME-HERE/commands</a></td>
-            <td><a href="https://nightbot.tv/t/STREAMERS-TWITCH-NAME-HERE/commands">nightbot.tv/t/STREAMERS-TWITCH-NAME-HERE/commands</a></td>
-            <td><a href="https://streamlabs.com/dashboard#/cloudbot/commands/custom">Slobs custom commands</a></td>
-        </tr>
-        <tr>
-            <td>Default commands</td>
-            <td><a href="https://streamelements.com/dashboard/bot-commands/default-commands">SE default commands</a></td>
-            <td><a href="https://docs.nightbot.tv/commands/commandlist">Nightbot default commands</a></td>
-            <td><a href="https://streamlabs.com/dashboard#/cloudbot/commands/default">Slobs default commands</a></td>
-        </tr>
-    </table>
+    <div id="linksdiv" style="overflow-x: auto;">
+        <h2 id="linksstitle">Important Links</h2>
+        <table id="links">
+            <tr>
+                <th>Item</th>
+                <th> <img src="https://cdn.streamelements.com/static/logo/logo_red.png" width=20> StreamElements</th>
+                <th><img src="https://nightbot.tv/assets/images/text-logo.png" width=60> NightBot</th>
+                <th><img src="https://cdn.streamlabs.com/static/imgs/streamlabs-logos/favicon/favicon.png" width=20> Streamlabs</th>
+            </tr>
+            <tr>
+                <td>Get to your bot commands</td>
+                <td><a href="https://streamelements.com/dashboard">streamelements.com</a> <br />login with twitch > 5th grouping on left > modules/chat comm's</td>
+                <td><a href="https://nightbot.tv/dashboard">Nightbot.com</a><br />Nightbot > login should take you to your dashboard > commands (2nd on left)</td>
+                <td><a href="https://streamlabs.com/dashboard#/">Streamlabs</a><br />Streamlabs.com > dashboard > cloudbot (8th option on left) > commands</td>
+            </tr>
+            <tr>
+                <td>Links to variable guides/documentation</td>
+                <td><a href="https://streamelements.com/dashboard/bot/command-variables">SE variable guide</a> <br />must be logged in to view</td>
+                <td><a href="https://docs.nightbot.tv/commands/variableslist">Nightbot variable guide</a><br />public documentation</td>
+                <td><a href="https://streamlabs.com/dashboard#/cloudbot/commands/variables">Slobs variable guide</a><br />must be logged in, beside your commands</td>
+            </tr>
+            <tr>
+                <td>Page with all your commands</td>
+                <td><a href="https://streamelements.com/botnyxrecon/commands">StreamElements commands</a><br />publicly visible commands, change botnyxrecon in the url to your channels name</td>
+                <td><a href="https://nightbot.tv/t/botnyxrecon/commands">Nightbot commands</a><br />publicly visible commands, change botnyxrecon in the url to your channels name</td>
+                <td><a href="https://streamlabs.com/dashboard#/cloudbot/commands/custom">Slobs custom commands</a><br />must be logged in to view</td>
+            </tr>
+            <tr>
+                <td>Default commands location to enable/disable</td>
+                <td><a href="https://streamelements.com/dashboard/bot-commands/default-commands">SE default commands</a></td>
+                <td><a href="https://nightbot.tv/commands/default">Nightbot default commands</a></td>
+                <td><a href="https://streamlabs.com/dashboard#/cloudbot/commands/default">Slobs default commands</a></td>
+            </tr>
+        </table>
+    </div>
 
-    <h2 id="variablestitle">Basic Variable Usage</h2>
-    <table id="variables">
-        <tr>
-            <th>Variable</th>
-            <th>Input</th>
-            <th>Result</th>
-            <th> <img src="https://cdn.streamelements.com/static/logo/logo_red.png" width=20> StreamElements</th>
-            <th><img src="https://nightbot.tv/assets/images/text-logo.png" width=60> NightBot</th>
-            <th><img src="https://cdn.streamlabs.com/static/imgs/streamlabs-logos/favicon/favicon.png" width=20> Streamlabs</th>
-        </tr>
-        <tr>
-            <td>Links to variable pages</td>
-            <td>ask for something</td>
-            <td>respond with a specific variable</td>
-            <td><a href="https://streamelements.com/dashboard/bot/command-variables">SE variable guide</a></td>
-            <td>!commands add !test YES I AM HERE!</td>
-            <td>!addcommand !test YES I AM HERE!</td>
-        </tr>
-        <tr>
-            <td>Basic variable structure</td>
-            <td>onyx: !test</td>
-            <td>"I am here @onyx"</td>
-            <td>!command add !test YES I AM HERE!</td>
-            <td>!commands add !test YES I AM HERE!</td>
-            <td>!addcommand !test YES I AM HERE!</td>
-        </tr>
-        <tr>
-            <td>Respond to user with @</td>
-            <td>onyx: !test</td>
-            <td>"I am here @onyx"</td>
-            <td>!command add !test YES I AM HERE!</td>
-            <td>!commands add !test YES I AM HERE!</td>
-            <td>!addcommand !test YES I AM HERE!</td>
-        </tr>
-    </table>
+    <div id="variablesdiv" style="overflow-x: auto;">
+        <h2 id="variablestitle">Basic Variable Usage</h2>
+        <table id="variables">
+            <tr>
+                <th>Variable</th>
+                <th>Input</th>
+                <th>Result</th>
+                <th> <img src="https://cdn.streamelements.com/static/logo/logo_red.png" width=20> StreamElements</th>
+                <th><img src="https://nightbot.tv/assets/images/text-logo.png" width=60> NightBot</th>
+                <th><img src="https://cdn.streamlabs.com/static/imgs/streamlabs-logos/favicon/favicon.png" width=20> Streamlabs</th>
+            </tr>
+            <tr>
+                <td>Links to variable pages</td>
+                <td>ask for something</td>
+                <td>respond with a specific variable</td>
+                <td><a href="https://streamelements.com/dashboard/bot/command-variables">SE variable guide</a></td>
+                <td>!commands add !test YES I AM HERE!</td>
+                <td>!addcommand !test YES I AM HERE!</td>
+            </tr>
+            <tr>
+                <td>Basic variable structure</td>
+                <td>onyx: !test</td>
+                <td>"I am here @onyx"</td>
+                <td>!command add !test YES I AM HERE!</td>
+                <td>!commands add !test YES I AM HERE!</td>
+                <td>!addcommand !test YES I AM HERE!</td>
+            </tr>
+            <tr>
+                <td>Respond to user with @</td>
+                <td>onyx: !test</td>
+                <td>"I am here @onyx"</td>
+                <td>!command add !test YES I AM HERE!</td>
+                <td>!commands add !test YES I AM HERE!</td>
+                <td>!addcommand !test YES I AM HERE!</td>
+            </tr>
+        </table>
+    </div>
 
-    <h2 id="toolstitle">Links to additional tools</h2>
-    <table id="tools">
-        <tr>
-            <th>Tool</th>
-            <th>What it does</th>
-            <th>How it can be used</th>
-        </tr>
-        <tr>
-            <td><a href="https://emojipedia.org/">Emojipedia</a></td>
-            <td>Search and find emojis to use in chat</td>
-            <td>🏳️‍🌈 Paste 🥰 them ✨ into 🥺 commands 🎸 for extra style and emphasis. Can use to show off streamers interests and identity. Remember humans are visual, and emoji users have more sex ;P</td>
-        </tr>
-        <tr>
-            <td><a href="https://t.3v.fi/modlookup">Mod tools</a></td>
-            <td>hit "check your sword count" and put in your username to see who you mod for</td>
-            <td>This site also has other tools you can check out!</td>
-        </tr>
-    </table>
+    <div id="toolsdiv" style="overflow-x: auto;">
+        <h2 id="toolstitle">Links to additional tools</h2>
+        <table id="tools">
+            <tr>
+                <th>Tool</th>
+                <th>What it does</th>
+                <th>How it can be used</th>
+            </tr>
+            <tr>
+                <td><a href="https://emojipedia.org/">Emojipedia</a></td>
+                <td>Search and find emojis to use in chat</td>
+                <td>🏳️‍🌈 Paste 🥰 them ✨ into 🥺 commands 🎸 for extra style and emphasis. Can use to show off streamers interests and identity. Remember humans are visual, and emoji users have more sex ;P</td>
+            </tr>
+            <tr>
+                <td><a href="https://t.3v.fi/modlookup">Mod tools</a></td>
+                <td>hit "check your sword count" and put in your username to see who you mod for</td>
+                <td>This site also has other tools you can check out!</td>
+            </tr>
+        </table>
 
-    <h2 id="infotitle">more how-to</h2>
-    <table id="info">
-        <tr>
-            <th>adding stuff</th>
-        </tr>
-        <tr>
-            <td><a href="https://emojipedia.org/">TODO in-page-link to pictures of how to add supermod etc</a></td>
+        <h2 id="infotitle">more how-to</h2>
+        <table id="info">
+            <tr>
+                <th>adding stuff</th>
+            </tr>
+            <tr>
+                <td><a href="https://emojipedia.org/">TODO in-page-link to pictures of how to add supermod etc</a></td>
 
-        </tr>
-    </table>
+            </tr>
+        </table>
+    </div>
 
 </body>
 </html>
