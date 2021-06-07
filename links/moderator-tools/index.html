@@ -15,6 +15,23 @@
     -->
 
     <style>
+        /* style for tables */
+        th { /* style for main parts */
+            background-color: #04AA6D;
+            color: white;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px 7px 12px 3px;
+        }
+        table { /* collapses dual lines into 1 border line */
+            border-collapse: collapse;
+        }
+        tr:nth-child(even) { /* horizontal stripes */
+            background-color: #f2f2f2;
+        }
+
+        /* style for headers */
         h3 {
             text-align: center;
             color: #b8c2f7
@@ -35,50 +52,65 @@
         links for bots each have their page: add, add supermods, switch to other streamers bot to add commands
     </h4>
 
+
+
+
+
     <h2 id="basicstitle">Basic Command Structures</h2>
     <h2 id="basicstitle">add !enable, basic command structure</h2>
-    <table id="basics">
-        <tr>
-            <th>Command</th>
-            <th>Input</th>
-            <th>Result</th>
-            <th>StreamElements</th>
-            <th>Nightbot</th>
-            <th>Streamlabs</th>
-        </tr>
-        <tr>
-            <td>Add command</td>
-            <td>!test</td>
-            <td>"YES I AM HERE!"</td>
-            <td>!command add !test YES I AM HERE!</td>
-            <td>!commands add !test YES I AM HERE!</td>
-            <td>!addcommand !test YES I AM HERE!</td>
-        </tr>
-        <tr>
-            <td>Edit command</td>
-            <td>!test</td>
-            <td>from "YES I AM HERE!" to "bot is running"</td>
-            <td>!command edit !test bot is running</td>
-            <td>!commands edit !test bot is running</td>
-            <td>!editcommand !test bot is running</td>
-        </tr>
-        <tr>
-            <td>Delete command</td>
-            <td>!test</td>
-            <td>From "YES I AM HERE!" to no response</td>
-            <td>!command delete !test</td>
-            <td>!commands delete !test</td>
-            <td>!removecommand !test</td>
-        </tr>
-    </table>
+    <!-- div to allow for formatting on mobile for tables-->
+    <div style="overflow-x: auto;">
+        <table id="basics">
+            <tr>
+                <th>Command</th>
+                <th>Input</th>
+                <th>Result</th>
+                <th> <img src="https://cdn.streamelements.com/static/logo/logo_red.png" width=20> StreamElements</th>
+                <th><img src="https://nightbot.tv/assets/images/text-logo.png" width=60> NightBot</th>
+                <th><img src="https://cdn.streamlabs.com/static/imgs/streamlabs-logos/favicon/favicon.png" width=20> Streamlabs</th>
+            </tr>
+            <tr>
+                <td>Add command</td>
+                <td>!test</td>
+                <td>"YES I AM HERE!"</td>
+                <td>!command add !test YES I AM HERE!</td>
+                <td>!commands add !test YES I AM HERE!</td>
+                <td>!addcommand !test YES I AM HERE!</td>
+            </tr>
+            <tr>
+                <td>Edit command</td>
+                <td>!test</td>
+                <td>from "YES I AM HERE!" to "bot is running"</td>
+                <td>!command edit !test bot is running</td>
+                <td>!commands edit !test bot is running</td>
+                <td>!editcommand !test bot is running</td>
+            </tr>
+            <tr>
+                <td>Delete command</td>
+                <td>!test</td>
+                <td>From "YES I AM HERE!" to no response</td>
+                <td>!command delete !test</td>
+                <td>!commands delete !test</td>
+                <td>!removecommand !test</td>
+            </tr>
+            <tr>
+                <td>Disable/Enable a command</td>
+                <td>!test</td>
+                <td>Nothing happens but command still exists</td>
+                <td>!command options !test -disable<br />!command options !test -enable</td>
+                <td>not possible afaik</td>
+                <td>the documentation says "!enable" but idk if its possible through chat</td>
+            </tr>
+        </table>
+    </div>
 
-    <h2 id="linksstitle">Important Links</h2>
+<h2 id="linksstitle">Important Links</h2>
     <table id="links">
         <tr>
             <th>Item</th>
-            <th>StreamElements</th>
-            <th>Nightbot</th>
-            <th>Streamlabs</th>
+            <th> <img src="https://cdn.streamelements.com/static/logo/logo_red.png" width=20> StreamElements</th>
+            <th><img src="https://nightbot.tv/assets/images/text-logo.png" width=60> NightBot</th>
+            <th><img src="https://cdn.streamlabs.com/static/imgs/streamlabs-logos/favicon/favicon.png" width=20> Streamlabs</th>
         </tr>
         <tr>
             <td>Links to variable pages</td>
@@ -106,9 +138,9 @@
             <th>Variable</th>
             <th>Input</th>
             <th>Result</th>
-            <th>StreamElements</th>
-            <th>Nightbot</th>
-            <th>Streamlabs</th>
+            <th> <img src="https://cdn.streamelements.com/static/logo/logo_red.png" width=20> StreamElements</th>
+            <th><img src="https://nightbot.tv/assets/images/text-logo.png" width=60> NightBot</th>
+            <th><img src="https://cdn.streamlabs.com/static/imgs/streamlabs-logos/favicon/favicon.png" width=20> Streamlabs</th>
         </tr>
         <tr>
             <td>Links to variable pages</td>
@@ -148,6 +180,11 @@
             <td>Search and find emojis to use in chat</td>
             <td>🏳️‍🌈 Paste 🥰 them ✨ into 🥺 commands 🎸 for extra style and emphasis. Can use to show off streamers interests and identity. Remember humans are visual, and emoji users have more sex ;P</td>
         </tr>
+        <tr>
+            <td><a href="https://t.3v.fi/modlookup">Mod tools</a></td>
+            <td>hit "check your sword count" and put in your username to see who you mod for</td>
+            <td>This site also has othertools you can check out!</td>
+        </tr>
     </table>
 
     <h2 id="infotitle">more how-to</h2>
@@ -156,7 +193,8 @@
             <th>adding stuff</th>
         </tr>
         <tr>
-            <td><a href="https://emojipedia.org/">in-page-link to pictures of how to add supermod etc</a></td>
+            <td><a href="https://emojipedia.org/">TODO in-page-link to pictures of how to add supermod etc</a></td>
+            
         </tr>
     </table>
 
