@@ -236,27 +236,39 @@
                 <th><img src="https://cdn.streamlabs.com/static/imgs/streamlabs-logos/favicon/favicon.png" width=20> Streamlabs</th>
             </tr>
             <tr>
+                <td>Counter</td>
+                <td>${count deaths}</td>
+                <td>$(count hugs)</td>
+                <td>TODOslobs</td>
+            </tr>
+            <tr>
                 <td>Random number generator</td>
-                <td>TODOse</td>
-                <td>TODOnb</td>
+                <td>${random.1-10}</td>
+                <td>$(eval Math.floor(Math.random() * 10 + 1)) [get rid of the 1 for 0-9]</td>
                 <td>TODOslobs</td>
             </tr>
             <tr>
                 <td>Percent</td>
-                <td>TODOse</td>
-                <td>TODOnb</td>
+                <td>${random.1-100}%</td>
+                <td>$(eval Math.round(Math.random()*100))</td>
                 <td>TODOslobs</td>
             </tr>
             <tr>
-                <td>Choose between multiple responses</td>
-                <td>TODOse</td>
-                <td>TODOnb</td>
+                <td>Choose between multiple responses [can add more just copy the syntax) </td>
+                <td>${random.pick '1' '2' 'the three'}</td>
+                <td>$(eval const responses = ['no', 'Yes!', 'uhh maybe']; responses[Math.floor(Math.random() * responses.length)];)</td>
                 <td>TODOslobs</td>
             </tr>
             <tr>
-                <td>todoCom</td>
-                <td>TODOse</td>
-                <td>TODOnb</td>
+                <td>Set Game</td>
+                <td>${setgame "League of Legends"}</td>
+                <td>!game League of Legends</td>
+                <td>TODOslobs</td>
+            </tr>
+            <tr>
+                <td>Random user [ie, for contests or random !fight]</td>
+                <td>${random.chatter}</td>
+                <td>$(urlfetch https://2g.be/twitch/randomviewer.php?channel=$(channel))</td>
                 <td>TODOslobs</td>
             </tr>
         </table>
