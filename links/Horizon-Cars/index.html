@@ -1,11 +1,286 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Forza Cars</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#d3d3d3">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="../../javascripts/respond.js"></script>
+
+    <!--
+            comments
+    -->
+
+    <!-- style -->
+    <style>
+        body {
+            background-color: #2a2a2a;
+            width: 97%;
+            vertical-align: middle;
+        }
+
+        h3 {
+            text-align: center;
+            color: #b8c2f7;
+        }
+
+        .wrapper {
+            margin-left: 14px;
+            margin-right: 14px;
+            max-width: 95%;
+        }
+
+        section {
+            margin-top: 0px;
+            max-width: 100%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: left;
+            color: #6441A4;
+        }
+
+        header a {
+            font-size: 72px;
+            color: #6441A4;
+        }
+
+        #header {
+            padding: 0;
+            margin: 0;
+        }
+
+        #myInput {
+            background-image: url('https://www.w3schools.com/css/searchicon.png');
+            background-position: 10px 12px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #143a51;
+            margin-bottom: 12px;
+        }
+
+        #myUL {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #myUL li {
+            border: 1px solid #7d7660;
+            margin-top: -1px; /* Prevent double borders */
+            background-color: #33363b;
+            padding: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #e4dcc7;
+            display: block;
+        }
+
+        #myUL li:hover:not(.header) { /* broken, not highlightingthe whole thing */
+            background-color: #7d7660;
+        }
+
+        .one:after {
+            content: ' ';
+            display: inline;
+            height: 20px; /*height of icon */
+            width: 20px; /*width of icon */
+            position: absolute; /*where to replace the icon */
+            /*background */
+            background: #F8E6AE url(https://raw.githubusercontent.com/onyyx/onyyx.github.io/master/images/1.png) 0px 0px;
+        }
+        .two:after {
+            content: ' ';
+            display: inline;
+            height: 20px; /*height of icon */
+            width: 20px; /*width of icon */
+            position: absolute; /*where to replace the icon */
+            /*background */
+            background: #F8E6AE url(https://raw.githubusercontent.com/onyyx/onyyx.github.io/master/images/2.png) 0px 0px;
+        }
+        .three:after {
+            content: ' ';
+            display: inline;
+            height: 20px; /*height of icon */
+            width: 20px; /*width of icon */
+            position: absolute; /*where to replace the icon */
+            /*background */
+            background: #F8E6AE url(https://raw.githubusercontent.com/onyyx/onyyx.github.io/master/images/3.png) 0px 0px;
+        }
+        .four:after {
+            content: ' ';
+            display: inline;
+            height: 20px; /*height of icon */
+            width: 20px; /*width of icon */
+            position: absolute; /*where to replace the icon */
+            /*background */
+            background: #F8E6AE url(https://raw.githubusercontent.com/onyyx/onyyx.github.io/master/images/4.png) 0px 0px;
+        }
+        .five:after {
+            content: ' ';
+            display: inline;
+            height: 20px; /*height of icon */
+            width: 20px; /*width of icon */
+            position: absolute; /*where to replace the icon */
+            /*background */
+            background: #F8E6AE url(https://raw.githubusercontent.com/onyyx/onyyx.github.io/master/images/5.png) 0px 0px;
+        }
+
+        p {
+            display: inline;
+            margin: 1px 15px 1px 15px;
+        }
+
+    </style>
+
 </head>
+
 <body>
+
+    <div class="wrapper">
+        <section>
+
+
+            <!-- header stuff -->
+            <div id="title">
+                <h3 text-align: center>Play In Perpetuum</h3>
+
+                <!-- name stuff -->
+                <div style="text-align: center; flex-flow: row wrap; align-items: center;">
+
+                    <a href="https://www.twitch.tv/onyxrecon" aria-label="twitch.tv/">
+                        <title>twitch.tv/</title>
+                        <svg width="200" height="200" viewBox="0 0 200 200" style="fill: rgb(255, 255, 255); width: 44px; height: 44px; padding: 4px; filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 0.5px 1px);">
+                            <path d="M32.6667 16H182.667V116L141 157.667H107.667L82.6667 182.667H57.6667V157.667H16V49.3333L32.6667 16ZM166 107.667V32.6667H49.3333V132.667H74.3333V157.667L99.3333 132.667H141L166 107.667ZM124.333 57.6667H141V99.3333H124.333V57.6667ZM99.3333 57.6667V99.3333H82.6667V57.6667H99.3333Z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://discord.gg/dTQTyXs" aria-label="">
+                        <title></title>
+                        <svg height="200" viewBox="0 0 200 200" width="200" style="fill: rgb(255, 255, 255); width: 44px; height: 44px; padding: 4px; filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 0.5px 1px);">
+                            <path d="M155.753 17H44.0837C34.6668 17 27 24.6668 27 34.167V146.836C27 156.336 34.6668 164.003 44.0837 164.003H138.586L134.169 148.586L144.836 158.503L154.919 167.836L172.836 183.67V34.167C172.836 24.6668 165.169 17 155.753 17ZM123.585 125.836C123.585 125.836 120.585 122.252 118.085 119.085C129.002 116.002 133.169 109.169 133.169 109.169C129.752 111.419 126.502 113.002 123.585 114.085C119.419 115.835 115.418 117.002 111.502 117.669C103.502 119.169 96.168 118.752 89.9179 117.585C85.1678 116.669 81.0844 115.335 77.6677 114.002C75.751 113.252 73.6676 112.335 71.5842 111.169C71.3342 111.002 71.0842 110.919 70.8342 110.752C70.6675 110.669 70.5842 110.585 70.5009 110.502C69.0008 109.669 68.1675 109.085 68.1675 109.085C68.1675 109.085 72.1676 115.752 82.7511 118.919C80.2511 122.085 77.1677 125.836 77.1677 125.836C58.7506 125.252 51.7505 113.169 51.7505 113.169C51.7505 86.3347 63.7507 64.5843 63.7507 64.5843C75.751 55.5841 87.1679 55.8341 87.1679 55.8341L88.0012 56.8341C73.0009 61.1675 66.0841 67.751 66.0841 67.751C66.0841 67.751 67.9175 66.751 71.0009 65.3343C79.9177 61.4176 87.0012 60.3342 89.9179 60.0842C90.4179 60.0009 90.8346 59.9175 91.3346 59.9175C96.4181 59.2508 102.168 59.0842 108.168 59.7509C116.085 60.6675 124.585 63.0009 133.252 67.751C133.252 67.751 126.669 61.5009 112.502 57.1675L113.668 55.8341C113.668 55.8341 125.085 55.5841 137.086 64.5843C137.086 64.5843 149.086 86.3347 149.086 113.169C149.086 113.169 142.002 125.252 123.585 125.836ZM84.8345 86.9181C80.0844 86.9181 76.3343 91.0848 76.3343 96.1682C76.3343 101.252 80.1677 105.418 84.8345 105.418C89.5846 105.418 93.3347 101.252 93.3347 96.1682C93.418 91.0848 89.5846 86.9181 84.8345 86.9181ZM115.252 86.9181C110.502 86.9181 106.752 91.0848 106.752 96.1682C106.752 101.252 110.585 105.418 115.252 105.418C120.002 105.418 123.752 101.252 123.752 96.1682C123.752 91.0848 120.002 86.9181 115.252 86.9181Z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/2onyx2recon" aria-label="twitter.com/">
+                        <title>twitter.com/</title>
+                        <svg width="200" height="200" viewBox="0 0 200 200" style="fill: rgb(255, 255, 255); width: 44px; height: 44px; padding: 4px; filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 0.5px 1px);">
+                            <path d="M187.167 49.9999C180.75 52.9166 173.833 54.8333 166.667 55.7499C174 51.3333 179.667 44.3333 182.333 35.9166C175.417 40.0833 167.75 42.9999 159.667 44.6666C153.083 37.4999 143.833 33.3333 133.333 33.3333C113.75 33.3333 97.75 49.3333 97.75 69.0833C97.75 71.9166 98.0833 74.6666 98.6667 77.2499C69 75.7499 42.5833 61.4999 25 39.9166C21.9167 45.1666 20.1667 51.3333 20.1667 57.8333C20.1667 70.2499 26.4167 81.2499 36.0833 87.4999C30.1667 87.4999 24.6667 85.8333 19.8333 83.3333C19.8333 83.3333 19.8333 83.3332 19.8333 83.5832C19.8333 100.917 32.1667 115.417 48.5 118.667C45.5 119.5 42.3333 119.917 39.0833 119.917C36.8333 119.917 34.5833 119.667 32.4167 119.25C36.9167 133.333 50 143.833 65.75 144.083C53.5833 153.75 38.1667 159.417 21.3333 159.417C18.5 159.417 15.6667 159.25 12.8333 158.917C28.6667 169.083 47.5 175 67.6667 175C133.333 175 169.417 120.5 169.417 73.2499C169.417 71.6666 169.417 70.1666 169.333 68.5832C176.333 63.5832 182.333 57.2499 187.167 49.9999Z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/onyx.recon" aria-label="instagram.com/">
+                        <title>instagram.com/</title>
+                        <svg width="200" height="200" viewBox="0 0 200 200" style="fill: rgb(255, 255, 255); width: 44px; height: 44px; padding: 4px; filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 0.5px 1px);">
+                            <path d="M65 16.6667H135C161.667 16.6667 183.333 38.3334 183.333 65.0001V135C183.333 147.819 178.241 160.113 169.177 169.177C160.113 178.241 147.819 183.333 135 183.333H65C38.3333 183.333 16.6667 161.667 16.6667 135V65.0001C16.6667 52.1813 21.7589 39.8875 30.8232 30.8233C39.8874 21.759 52.1812 16.6667 65 16.6667ZM63.3333 33.3334C55.3768 33.3334 47.7462 36.4941 42.1201 42.1202C36.494 47.7463 33.3333 55.3769 33.3333 63.3334V136.667C33.3333 153.25 46.75 166.667 63.3333 166.667H136.667C144.623 166.667 152.254 163.506 157.88 157.88C163.506 152.254 166.667 144.623 166.667 136.667V63.3334C166.667 46.7501 153.25 33.3334 136.667 33.3334H63.3333ZM143.75 45.8334C146.513 45.8334 149.162 46.9309 151.116 48.8844C153.069 50.8379 154.167 53.4874 154.167 56.2501C154.167 59.0128 153.069 61.6623 151.116 63.6158C149.162 65.5693 146.513 66.6668 143.75 66.6668C140.987 66.6668 138.338 65.5693 136.384 63.6158C134.431 61.6623 133.333 59.0128 133.333 56.2501C133.333 53.4874 134.431 50.8379 136.384 48.8844C138.338 46.9309 140.987 45.8334 143.75 45.8334ZM100 58.3334C111.051 58.3334 121.649 62.7233 129.463 70.5373C137.277 78.3513 141.667 88.9494 141.667 100C141.667 111.051 137.277 121.649 129.463 129.463C121.649 137.277 111.051 141.667 100 141.667C88.9493 141.667 78.3512 137.277 70.5372 129.463C62.7232 121.649 58.3333 111.051 58.3333 100C58.3333 88.9494 62.7232 78.3513 70.5372 70.5373C78.3512 62.7233 88.9493 58.3334 100 58.3334ZM100 75.0001C93.3696 75.0001 87.0107 77.634 82.3223 82.3224C77.6339 87.0108 75 93.3697 75 100C75 106.631 77.6339 112.989 82.3223 117.678C87.0107 122.366 93.3696 125 100 125C106.63 125 112.989 122.366 117.678 117.678C122.366 112.989 125 106.631 125 100C125 93.3697 122.366 87.0108 117.678 82.3224C112.989 77.634 106.63 75.0001 100 75.0001Z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://onyyx.github.io/index.html" aria-label="">
+                        <title></title>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="52.000000pt" height="52.000000pt" viewBox="0 0 600.000000 430.000000"
+                             preserveAspectRatio="xMidYMid meet">
+                            <metadata>
+                                Created by potrace 1.16, written by Peter Selinger 2001-2019, edited by onyyx
+                            </metadata>
+                            <g transform="translate(0.000000,430.000000) scale(0.100000,-0.100000)" fill="#FFFFFF" stroke="none">
+                                <path d="M1682 4130 c-34 -21 -62 -71 -62 -111 0 -32 27 -82 58 -104 27 -20 47 -20 1772 -25 1641 -5 1750 -7 1830 -24 142 -30 209 -76 260 -178 28 -56 30 -69 30 -165 0 -131 -19 -208 -81 -328 -74 -145 -136 -232 -234 -330 -118 -119 -215 -191 -372 -277 -199 -108 -329 -156 -568 -209 -174 -38 -312 -49 -722 -57 l-322 -7 -31 -30 c-45 -44 -57 -93 -34 -141 11 -21 34 -49 53 -61 33 -22 41 -23 292 -23 306 0 378 -11 565 -88 145 -59 218 -106 304 -198 120 -128 230 -406 230 -584 0 -189 -55 -397 -199 -758 -23 -56 -41 -118 -41 -138 0 -70 55 -124 125 -124 54 0 92 24 119 78 63 124 211 553 239 692 31 152 42 304 27 393 -17 110 -83 272 -178 437 -87 153 -178 258 -274 316 -64 39 -66 57 -5 69 18 4 88 25 157 47 448 143 819 401 1032 718 56 83 123 234 152 340 23 83 26 114 26 250 0 259 -50 386 -200 514 -67 58 -117 82 -211 103 -67 15 -240 17 -1889 20 -1811 3 -1815 3 -1848 -17z" />
+                                <path d="M1688 3654 c-86 -20 -169 -66 -219 -122 -69 -77 -245 -479 -479 -1097 -67 -176 -137 -358 -155 -405 -19 -47 -50 -128 -69 -180 -126 -346 -404 -1051 -466 -1185 -61 -131 -110 -257 -110 -281 0 -44 40 -116 79 -142 87 -57 76 -57 931 -57 l785 0 68 29 c111 47 158 98 232 250 60 124 89 191 224 521 60 146 88 218 165 421 25 67 50 132 55 145 6 13 28 71 50 129 22 58 84 220 137 360 53 140 136 359 184 485 94 249 192 489 302 739 64 145 70 164 66 212 -6 66 -40 113 -105 145 -67 32 -171 37 -953 42 -522 3 -677 1 -722 -9z m777 -254 c305 0 546 -4 554 -9 12 -8 9 -22 -18 -83 -108 -239 -245 -580 -482 -1203 -111 -291 -222 -582 -246 -645 -25 -63 -48 -126 -53 -140 -15 -47 -118 -305 -185 -465 -37 -88 -84 -202 -105 -253 -21 -51 -47 -107 -57 -125 l-19 -32 -595 -3 c-466 -2 -598 1 -611 10 -15 12 -11 25 37 133 107 242 209 493 327 803 66 174 167 441 225 592 195 512 246 645 278 730 70 186 275 661 294 684 13 15 25 17 66 12 28 -3 293 -6 590 -6z" />
+                                <path d="M2774 456 c-53 -23 -113 -84 -124 -127 -22 -80 27 -134 133 -149 92 -13 152 3 205 55 50 50 58 96 26 157 -26 49 -81 78 -149 78 -33 -1 -74 -7 -91 -14z" />
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/c/0nyxRecon" aria-label="youtube.com/">
+                        <title>youtube.com/</title>
+                        <svg width="200" height="200" viewBox="0 0 200 200" style="fill: rgb(255, 255, 255); width: 44px; height: 44px; padding: 4px; filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 0.5px 1px);">
+                            <path d="M83.3333 125L126.583 100L83.3333 75.0001V125ZM179.667 59.7501C180.75 63.6667 181.5 68.9167 182 75.5834C182.583 82.2501 182.833 88.0001 182.833 93.0001L183.333 100C183.333 118.25 182 131.667 179.667 140.25C177.583 147.75 172.75 152.583 165.25 154.667C161.333 155.75 154.167 156.5 143.167 157C132.333 157.583 122.417 157.833 113.25 157.833L100 158.333C65.0833 158.333 43.3333 157 34.75 154.667C27.25 152.583 22.4166 147.75 20.3333 140.25C19.25 136.333 18.5 131.083 18 124.417C17.4166 117.75 17.1666 112 17.1666 107L16.6666 100C16.6666 81.7501 18 68.3334 20.3333 59.7501C22.4166 52.2501 27.25 47.4167 34.75 45.3334C38.6666 44.2501 45.8333 43.5001 56.8333 43.0001C67.6666 42.4167 77.5833 42.1667 86.75 42.1667L100 41.6667C134.917 41.6667 156.667 43.0001 165.25 45.3334C172.75 47.4167 177.583 52.2501 179.667 59.7501Z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/tyvan8" aria-label="instagram.com/">
+                        <title>instagram.com/</title>
+                        <svg width="200" height="200" viewBox="0 0 200 200" style="fill: rgb(255, 255, 255); width: 44px; height: 44px; padding: 4px; filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 0.5px 1px);">
+                            <path d="M65 16.6667H135C161.667 16.6667 183.333 38.3334 183.333 65.0001V135C183.333 147.819 178.241 160.113 169.177 169.177C160.113 178.241 147.819 183.333 135 183.333H65C38.3333 183.333 16.6667 161.667 16.6667 135V65.0001C16.6667 52.1813 21.7589 39.8875 30.8232 30.8233C39.8874 21.759 52.1812 16.6667 65 16.6667ZM63.3333 33.3334C55.3768 33.3334 47.7462 36.4941 42.1201 42.1202C36.494 47.7463 33.3333 55.3769 33.3333 63.3334V136.667C33.3333 153.25 46.75 166.667 63.3333 166.667H136.667C144.623 166.667 152.254 163.506 157.88 157.88C163.506 152.254 166.667 144.623 166.667 136.667V63.3334C166.667 46.7501 153.25 33.3334 136.667 33.3334H63.3333ZM143.75 45.8334C146.513 45.8334 149.162 46.9309 151.116 48.8844C153.069 50.8379 154.167 53.4874 154.167 56.2501C154.167 59.0128 153.069 61.6623 151.116 63.6158C149.162 65.5693 146.513 66.6668 143.75 66.6668C140.987 66.6668 138.338 65.5693 136.384 63.6158C134.431 61.6623 133.333 59.0128 133.333 56.2501C133.333 53.4874 134.431 50.8379 136.384 48.8844C138.338 46.9309 140.987 45.8334 143.75 45.8334ZM100 58.3334C111.051 58.3334 121.649 62.7233 129.463 70.5373C137.277 78.3513 141.667 88.9494 141.667 100C141.667 111.051 137.277 121.649 129.463 129.463C121.649 137.277 111.051 141.667 100 141.667C88.9493 141.667 78.3512 137.277 70.5372 129.463C62.7232 121.649 58.3333 111.051 58.3333 100C58.3333 88.9494 62.7232 78.3513 70.5372 70.5373C78.3512 62.7233 88.9493 58.3334 100 58.3334ZM100 75.0001C93.3696 75.0001 87.0107 77.634 82.3223 82.3224C77.6339 87.0108 75 93.3697 75 100C75 106.631 77.6339 112.989 82.3223 117.678C87.0107 122.366 93.3696 125 100 125C106.63 125 112.989 122.366 117.678 117.678C122.366 112.989 125 106.631 125 100C125 93.3697 122.366 87.0108 117.678 82.3224C112.989 77.634 106.63 75.0001 100 75.0001Z"></path>
+                        </svg>
+                    </a>
+                    <a href="mailto:OnyxIChooseGaming@gmail.com" aria-label="email">
+                        <title>email</title>
+                        <svg width="200" height="200" viewBox="0 0 200 200" style="fill: rgb(255, 255, 255); width: 44px; height: 44px; padding: 4px; filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 0.5px 1px);">
+                            <path d="M166.667 33.3333H33.3334C24.1251 33.3333 16.7501 40.7916 16.7501 49.9999L16.6667 150C16.6667 159.208 24.1251 166.667 33.3334 166.667H166.667C175.875 166.667 183.333 159.208 183.333 150V49.9999C183.333 40.7916 175.875 33.3333 166.667 33.3333ZM166.667 150H33.3334V66.6666L100 108.333L166.667 66.6666V150ZM100 91.6666L33.3334 49.9999H166.667L100 91.6666Z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://tiktok.com/" aria-label="tiktok.com/@">
+                        <title>tiktok.com/@</title>
+                        <svg width="200" height="200" viewBox="0 0 200 200" style="fill: rgb(128, 128, 128); width: 44px; height: 44px; padding: 4px; filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 0.5px 1px);">
+                            <path d="M107.867 13.4255V131.484C107.867 144.526 97.2917 155.092 84.2583 155.092C71.2167 155.092 60.65 144.517 60.65 131.484C60.65 118.442 71.225 107.876 84.2583 107.876V76.3922C53.8333 76.3922 29.1667 101.059 29.1667 131.484C29.1667 161.909 53.8333 186.576 84.2583 186.576C114.683 186.576 139.35 161.909 139.35 131.484V76.3922L141.008 77.2255C150.267 81.8589 160.475 84.2672 170.825 84.2672V52.7755L169.883 52.5422C151.933 48.0589 139.342 31.9255 139.342 13.4255H107.867Z"></path>
+                        </svg>
+                    </a>
+
+
+
+
+                </div>
+
+
+                <hr>
+                <span class="credits left">Project maintained by <a href="https://github.com/onyyx">onyyx</a></span>
+            </div>
+
+
+            <div id="gifs">
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for car" title="Type in a caror brand or year">
+
+                <ul id="myUL">
+                    <!-- cars -->
+                    <div id="carlist">
+                        <li> Car Name Year <p class="one"><p class="two"> </p> </li>
+                        <li> Car Name Year2 <p class="one"><p class="two"> </p> </li>
+                        <li> <p>Car Name Year3</p> <p class="two"><p class="four"> </p> </li>
+                    </div>
+
+
+                </ul>
+                <p>yall ever notice how big brain asian elephants are?</p>
+
+                <script>
+                    function myFunction() {
+                        var input, filter, ul, li, a, i, txtValue;
+                        input = document.getElementById("myInput");
+                        filter = input.value.toUpperCase();
+                        ul = document.getElementById("myUL");
+                        li = ul.getElementsByTagName("li");
+                        for (i = 0; i < li.length; i++) {
+                            a = li[i].getElementsByTagName("p")[0];
+                            txtValue = a.textContent || a.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                li[i].style.display = "";
+                            } else {
+                                li[i].style.display = "none"; 
+                            }
+                        }
+                    }
+                </script>
+
+            </div>
+
+        </section>
+    </div>
+
+
 
 </body>
 </html>
