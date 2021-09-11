@@ -149,6 +149,44 @@
             display: inline;
             margin: 1px 15px 1px 15px;
         }
+        #gifs {
+            width: 75%;
+            margin: auto;
+        }
+        #selections {
+            width: 75%;
+            margin: auto;
+        }
+        button {
+            border-radius: 10px;
+            padding: 10px 12px;
+            color: #efefef;
+            background-color: #121212;
+            font: 25px;
+            margin: 5px 1px;
+            border: 2px solid #40c1f2;
+        }
+        button:hover {
+            background-color: #121212;
+            border: 2px solid #f3f3f3;
+            transition-duration: 0.6s;
+        }
+        .button1, .one:after {
+            border: 2px solid #FF4500;
+        }
+        .button2, .two.after {
+            border: 2px solid #FF8300;
+        }
+        .button3, .three.after {
+            border: 2px solid #f2e22d;
+        }
+        .button4, .four.after {
+            border: 2px solid #B7AC44;
+        }
+        .button5, .five.after {
+            border: 2px solid #DF362D;
+        }
+
 
     </style>
 
@@ -158,8 +196,6 @@
 
     <div class="wrapper">
         <section>
-
-
             <!-- header stuff -->
             <div id="title">
                 <h3 text-align: center>Play In Perpetuum</h3>
@@ -235,14 +271,35 @@
 
                 </div>
 
-
                 <hr>
-                <span class="credits left">Project maintained by <a href="https://github.com/onyyx">onyyx</a></span>
             </div>
 
-            <br> 
-            <a href="https://onyyx.github.io/">WEBSITE HOME</a><br> 
-            <br> 
+            <br>
+
+            <div id="selections">
+                <button id="newCars" onclick="OnlyShowByGame('one')" class="button button1"> Forza Horizon Car List </button>
+                <button id="newCars" onclick="OnlyShowByGame('two')" class="button button2"> FH2 Car List </button>
+                <button id="newCars" onclick="OnlyShowByGame('three')" class="button button3"> FH3 Car List </button>
+                <button id="newCars" onclick="OnlyShowByGame('four')" class="button button4"> FH4 Car List </button>
+                <button id="newCars" onclick="OnlyShowByGame('five')" class="button button5"> FH5 Car List </button>
+                <br>
+                <br>
+                <button id="newCars" onclick="OnlyInAll()"> Cars in all </button>
+                <button id="newCars" onclick="OnlyInOne()"> Cars in only a single game </button>
+                <button id="newCars" onclick="OnlyHE()"> Horizon Editions </button>
+                <button id="newCars" onclick="OnlyInOld()"> Cars in FH1-FH4 </button>
+                <br>
+                <br>
+                
+                <div id="countering" style="color:#e4dcc7; font:18px;">
+                    <button id="resetSearch"
+                            onclick="document.getElementById('myInput').value = '';
+                        myFunction()">
+                         > Clear search <
+                    </button>
+                    <a>Number of cars visible: </a><a id="counter">1061</a>
+                </div>
+            </div>
 
             <div id="gifs">
                 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for car" title="Type in a car or brand or year">
@@ -275,7 +332,6 @@
                     <li> <p>Alfa Romeo Spider Quadrifoglio Verde 1986</p> <p class="two"></p>  </li>
                     <li> <p>Alfa Romeo Stelvio Quadrifoglio 2018</p> <p class="four"></p>  </li>
                     <li> <p>Alfa Romeo TZ3 Stradale Zagato 2011</p> <p class="one"></p>  </li>
-                    <li> <p>Alpine A110 1600s 1973</p> <p class="five"></p>  </li>
                     <li> <p>Alpine A110 2017</p> <p class="four"></p>  <p class="five"></p>  </li>
                     <li> <p>Alumi Craft Class 10 Race Car 2015</p> <p class="three"></p>  <p class="four"></p>  <p class="five"></p>  </li>
                     <li> <p>Alumi Craft Class 10 Race Car Horizon Edition 2015</p> <p class="four"></p>  </li>
@@ -1166,8 +1222,7 @@
                     <li> <p>Reliant Supervan III 1972</p> <p class="three"></p>  <p class="four"></p>  <p class="five"></p>  </li>
                     <li> <p>Renault 5 Turbo 1980</p> <p class="two"></p>  <p class="three"></p>  <p class="four"></p>  <p class="five"></p>  </li>
                     <li> <p>Renault 5 Turbo Horizon Edition 1980</p> <p class="four"></p>  </li>
-                    <li> <p>Renault Alpine A110 1600S 1973</p> <p class="two"></p>  <p class="three"></p>  </li>
-                    <li> <p>Renault Alpine A110 1600s 1973</p> <p class="four"></p>  </li>
+                    <li> <p>Renault Alpine A110 1600 S 1973</p> <p class="two"></p>  <p class="three"></p> <p class="four"></p> <p class="five"></p> </li>
                     <li> <p>Renault Alpine GTA Le Mans 1990</p> <p class="three"></p>  </li>
                     <li> <p>Renault Clio R.S. 16 Concept 2016</p> <p class="four"></p>  </li>
                     <li> <p>Renault Clio R.S. 200 EDC 2013</p> <p class="four"></p>  <p class="five"></p>  </li>
@@ -1316,8 +1371,11 @@
 
 
                 </ul>
-                <p>yall ever notice how big brain asian elephants are?</p>
+                <br>
+                <p>tibit: yall ever notice how big brain asian elephants are?</p>
 
+
+                <!-- search -->
                 <script>
                     function myFunction() {
                         var input, filter, ul, li, a, i, txtValue;
@@ -1334,6 +1392,148 @@
                                 li[i].style.display = "none";
                             }
                         }
+                        visibleCount();
+                    }
+                </script>
+
+                <!-- get a certain game -->
+                <script>
+                    function OnlyShowByGame(game) {
+                        var ul, li, a, i, j, x, txtValue;
+                        ul = document.getElementById("myUL");
+                        li = ul.getElementsByTagName("li");
+
+                        for (i = 0; i < li.length; i++) {
+                            a = li[i].getElementsByTagName("p");
+
+                            for (j = 0; j < a.length; j++) {
+
+                                txtValue = a[j].className;
+                                if (game == txtValue) {
+                                    x = "yes";
+                                }
+                            }
+                            if (x == "yes") {
+                                li[i].style.display = "";
+                            } else {
+                                li[i].style.display = "none";
+                            }
+                            x = "no";
+                        }
+                        visibleCount();
+                    }
+                </script>
+
+                <!-- one game -->
+                <script>
+                    function OnlyInOne() {
+                        var ul, li, a, i;
+                        ul = document.getElementById("myUL");
+                        li = ul.getElementsByTagName("li");
+
+                        for (i = 0; i < li.length; i++) {
+                            a = li[i].getElementsByTagName("p");
+
+                            if (a.length < 3) {
+                                li[i].style.display = "";
+                            } else {
+                                li[i].style.display = "none";
+                            }
+                        }
+                        visibleCount();
+                    }
+                </script>
+
+                <!-- all games -->
+                <script>
+                    function OnlyInAll() {
+                        var ul, li, a, i;
+                        ul = document.getElementById("myUL");
+                        li = ul.getElementsByTagName("li");
+
+                        for (i = 0; i < li.length; i++) {
+                            a = li[i].getElementsByTagName("p");
+
+                            if (a.length == 6) {
+                                li[i].style.display = "";
+                            } else {
+                                li[i].style.display = "none";
+                            }
+                        }
+                        visibleCount();
+                    }
+                </script>
+
+                <!-- Only HE <li> <p>Alfa Romeo 8C Competizione Horizon Edition 2007</p> <p class="four"></p>  </li>
+                    "Horizon Edition 2007" = 20-->
+                <script>
+                    function OnlyHE() {
+                        var ul, li, a, i;
+                        ul = document.getElementById("myUL");
+                        li = ul.getElementsByTagName("li");
+
+                        for (i = 0; i < li.length; i++) {
+                            a = li[i].getElementsByTagName("p");
+                            
+                            if (a[0].textContent.toUpperCase().indexOf("HORIZON EDITION") > -1) {
+                                li[i].style.display = "";
+                            }
+                            else {
+                                li[i].style.display = "none";
+                            }
+                        }
+                        visibleCount();
+                    }
+                </script>
+
+                <!-- 4 games TODO -->
+                <script>
+                    function OnlyInOld() {
+                        var ul, li, a, i, j, x, txtValue;
+                        ul = document.getElementById("myUL");
+                        li = ul.getElementsByTagName("li");
+
+                        for (i = 0; i < li.length; i++) {
+                            a = li[i].getElementsByTagName("p");
+
+                            if (a.length > 4) {
+                                for (j = 0; j < a.length; j++) {
+
+                                    txtValue = a[j].className;
+                                    if (txtValue == "five") {
+                                        x = "bad";
+                                    }
+                                }
+                                if (x != "bad") {
+                                    li[i].style.display = "";
+                                } else {
+                                    li[i].style.display = "none";
+                                }
+                                x = "good";
+                            }
+                            else {
+                                li[i].style.display = "none";
+                            }
+                        }
+                        visibleCount();
+                    }
+                </script>
+
+                <script>
+                    function visibleCount() {
+                        var ul, li, counter;
+                        ul = document.getElementById("myUL");
+                        li = ul.getElementsByTagName("li");
+                        counter = 0;
+
+                        for (i = 0; i < li.length; i++) {
+
+                            if (li[i].style.display != "none") {
+                                counter++;
+                            }
+                        }
+                        
+                        document.getElementById("counter").innerText = counter;
                     }
                 </script>
 
