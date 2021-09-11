@@ -107,6 +107,7 @@
             position: absolute; /*where to replace the icon */
             /*background */
             background: #F8E6AE url(https://raw.githubusercontent.com/onyyx/onyyx.github.io/master/images/1.png) 0px 0px;
+            margin: 0px 0px 0px 0px;
         }
         .two:after {
             content: ' ';
@@ -116,6 +117,7 @@
             position: absolute; /*where to replace the icon */
             /*background */
             background: #F8E6AE url(https://raw.githubusercontent.com/onyyx/onyyx.github.io/master/images/2.png) 0px 0px;
+            margin: 0px 0px 0px 4px;
         }
         .three:after {
             content: ' ';
@@ -125,6 +127,7 @@
             position: absolute; /*where to replace the icon */
             /*background */
             background: #F8E6AE url(https://raw.githubusercontent.com/onyyx/onyyx.github.io/master/images/3.png) 0px 0px;
+            margin: 0px 0px 0px 8px;
         }
         .four:after {
             content: ' ';
@@ -134,6 +137,7 @@
             position: absolute; /*where to replace the icon */
             /*background */
             background: #F8E6AE url(https://raw.githubusercontent.com/onyyx/onyyx.github.io/master/images/4.png) 0px 0px;
+            margin: 0px 0px 0px 12px;
         }
         .five:after {
             content: ' ';
@@ -143,6 +147,7 @@
             position: absolute; /*where to replace the icon */
             /*background */
             background: #F8E6AE url(https://raw.githubusercontent.com/onyyx/onyyx.github.io/master/images/5.png) 0px 0px;
+            margin: 0px 0px 0px 16px;
         }
 
         p {
@@ -161,10 +166,11 @@
             border-radius: 10px;
             padding: 10px 12px;
             color: #efefef;
-            background-color: #121212;
+            background-color: #1e1e1e;
             font: 25px;
             margin: 5px 1px;
-            border: 2px solid #40c1f2;
+            border: 2px solid #111b2a;
+            position: sticky;
         }
         button:hover {
             background-color: #121212;
@@ -172,21 +178,31 @@
             transition-duration: 0.6s;
         }
         .button1, .one:after {
-            border: 2px solid #FF4500;
+            border: 4px solid #843DF5;
         }
-        .button2, .two.after {
-            border: 2px solid #FF8300;
+        .button2, .two:after {
+            border: 4px solid #00A7E1;
         }
-        .button3, .three.after {
-            border: 2px solid #f2e22d;
+        .button3, .three:after {
+            border: 4px solid #007A6C;
         }
-        .button4, .four.after {
-            border: 2px solid #B7AC44;
+        .button4, .four:after {
+            border: 4px solid #FEC10B;
         }
-        .button5, .five.after {
-            border: 2px solid #DF362D;
+        .button5, .five:after {
+            border: 4px solid #6C0E2A;
         }
-
+        .button1:hover, .button2:hover, .button3:hover, .button4:hover, .button5:hover {
+            border: 4px solid #f3f3f3;
+            transition-duration: 0s;
+        }
+        .resetList {
+            border: 2px solid #c1b20a;
+        }
+        .resetList:hover {
+            border: 2px solid red;
+            transition-duration: 2.4s;
+        }
 
     </style>
 
@@ -277,11 +293,11 @@
             <br>
 
             <div id="selections">
-                <button id="newCars" onclick="OnlyShowByGame('one')" class="button button1"> Forza Horizon Car List </button>
-                <button id="newCars" onclick="OnlyShowByGame('two')" class="button button2"> FH2 Car List </button>
-                <button id="newCars" onclick="OnlyShowByGame('three')" class="button button3"> FH3 Car List </button>
-                <button id="newCars" onclick="OnlyShowByGame('four')" class="button button4"> FH4 Car List </button>
-                <button id="newCars" onclick="OnlyShowByGame('five')" class="button button5"> FH5 Car List </button>
+                <button id="newGame" onclick="OnlyShowByGame('one')" class="button button1"> Forza Horizon Car List </button>
+                <button id="newGame" onclick="OnlyShowByGame('two')" class="button button2"> FH2 Car List </button>
+                <button id="newGame" onclick="OnlyShowByGame('three')" class="button button3"> FH3 Car List </button>
+                <button id="newGame" onclick="OnlyShowByGame('four')" class="button button4"> FH4 Car List </button>
+                <button id="newGame" onclick="OnlyShowByGame('five')" class="button button5"> FH5 Car List </button>
                 <br>
                 <br>
                 <button id="newCars" onclick="OnlyInAll()"> Cars in all </button>
@@ -292,9 +308,9 @@
                 <br>
                 
                 <div id="countering" style="color:#e4dcc7; font:18px;">
-                    <button id="resetSearch"
+                    <button id="resetSearch" class="resetList"
                             onclick="document.getElementById('myInput').value = '';
-                        myFunction()">
+                        clearSearch()">
                          > Clear search <
                     </button>
                     <a>Number of cars visible: </a><a id="counter">1061</a>
@@ -1374,10 +1390,47 @@
                 <br>
                 <p>tibit: yall ever notice how big brain asian elephants are?</p>
 
+                <!-- listen for active-->
+                <script>
+                    // Add active class to the current button (highlight it)
+                    var header = document.getElementById("selections");
+                    var btns = header.getElementsById("newGame");
+                    for (var i = 0; i < btns.length; i++) {
+                        btns[i].addEventListener("click", function () {
+                            var current = document.getElementsById("active");
+                            current[0].id = current[0].id.replace(" active", "");
+                            this.id += " active";
+                        });
+                    }
+                </script>
 
-                <!-- search -->
+                <!-- search thru fh1-5
+                    <button id="newGame" onclick="OnlyShowByGame('five')" class="button button5"> FH5 Car List </button>
+                    
+                -->
                 <script>
                     function myFunction() {
+                        var input, filter, ul, li, a, i, txtValue;
+                        input = document.getElementById("myInput");
+                        filter = input.value.toUpperCase();
+                        ul = document.getElementById("myUL");
+                        li = ul.getElementsByTagName("li");
+                        for (i = 0; i < li.length; i++) {
+                            a = li[i].getElementsByTagName("p")[0];
+                            txtValue = a.textContent || a.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                li[i].style.display = "";
+                            } else {
+                                li[i].style.display = "none";
+                            }
+                        }
+                        visibleCount();
+                    }
+                </script>
+
+                <!-- clear search -->
+                <script>
+                    function clearSearch() {
                         var input, filter, ul, li, a, i, txtValue;
                         input = document.getElementById("myInput");
                         filter = input.value.toUpperCase();
@@ -1465,7 +1518,7 @@
                 </script>
 
                 <!-- Only HE <li> <p>Alfa Romeo 8C Competizione Horizon Edition 2007</p> <p class="four"></p>  </li>
-                    "Horizon Edition 2007" = 20-->
+    "Horizon Edition 2007" = 20-->
                 <script>
                     function OnlyHE() {
                         var ul, li, a, i;
@@ -1474,7 +1527,7 @@
 
                         for (i = 0; i < li.length; i++) {
                             a = li[i].getElementsByTagName("p");
-                            
+
                             if (a[0].textContent.toUpperCase().indexOf("HORIZON EDITION") > -1) {
                                 li[i].style.display = "";
                             }
@@ -1532,7 +1585,7 @@
                                 counter++;
                             }
                         }
-                        
+
                         document.getElementById("counter").innerText = counter;
                     }
                 </script>
