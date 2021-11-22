@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>homepage</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#d3d3d3">
+
+    <style>
+        body {
+            overflow: hidden; /*hides extras and scrollbars*/
+            height: 100vh; /*maxes out gradient*/
+            width: 100vw;
+            background-image: linear-gradient(0deg, #252d35, #3c4c4c);
+            
+        }
+        #searches {
+            margin-top: 1%;
+            margin-left: 10%;
+            margin-right: 10%;
+            text-align: center;
+        }
+        #entertainment, #onyx, #activeshows {
+            margin-top: 35px;
+            text-align: center;
+        }
+        input[type=text] {
+          width: 35%;
+          padding: 12px 20px;
+          margin: 17px;
+
+          font-size: 22px;
+
+          border: 5px solid #40396e;
+          border-radius: 10px;
+          box-sizing: border-box;
+
+          outline: 10px solid #f2f2f2;
+        }
+
+        input[type=image] {
+            margin: 17px 17px -16px 17px;
+            transform: scale(2.0);
+
+        }
+
+        img[src*="icons8"] {
+            width: 140px;
+            height: 140px;
+        }
+        img:hover {
+            filter: sepia(100);
+          /*transform: scale(1.1);  (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+        
+        img[src*="justwatch"] {
+
+            width: 125px;
+            height: 175px;
+            margin-right: 25px;
+        }
+
+    </style>
+
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+</head>
+
+<body>
+    <div id="elements" style="overflow-x: auto;">
+
+        <div id="searches" style="overflow-x: auto;">
+            <input type="text" id="GSearch" class="search" placeholder="Google Search" title="For Google Search">
+            <input type="text" id="DSearch" class="search" placeholder="DuckDuckGo Search" title="For DDG Search">
+            <input type="image" id="button" src="https://img.icons8.com/stickers/100/000000/right-squared.png" alt="Submit" width="48" height="48">
+            <!--<<input type="button" id="button" value="Search (TODO)" />-->
+        </div>
+
+        <div id="entertainment" style="overflow-x: auto;">
+            <a href="https://www.netflix.com/browse"> <img src="https://img.icons8.com/stickers/500/000000/netflix.png"/> </a>
+            <a href="https://www.youtube.com/"> <img src="https://img.icons8.com/stickers/500/000000/youtube-squared.png"/> </a>
+            <a href="https://www.twitch.tv/directory/following/live"> <img src="https://img.icons8.com/stickers/500/000000/twitch.png"/> </a>
+            <a href="https://www8.putlockers.fm/"> <img src="https://img.icons8.com/stickers/500/000000/documentary.png"/> </a>
+            
+            <a href="https://nhl66.ir/simulator"> <img src="https://img.icons8.com/stickers/500/000000/trophy.png"/> </a>
+            <a href="http://bilasport.net/nhl.html"> <img src="https://img.icons8.com/stickers/500/000000/player-shirt.png"/> </a>
+            
+        </div>
+
+        <div id="onyx" style="overflow-x: auto;">
+            <a href="https://onyyx.github.io/"> <img src="https://img.icons8.com/stickers/500/000000/code-file.png"/> </a>
+        </div>
+
+        <div id="activeshows" style="overflow-x: auto;">
+            <a href="https://putlockers.fm/watch/7vNaXK2d-dexter-season-9.html"> <img src="https://images.justwatch.com/poster/253083525/s332/season-1.webp"/> </a>
+            <a href="https://putlockers.fm/search-movies/Michael+C.+Hall.html"> <img src="https://images.justwatch.com/poster/8599931/s332"/> </a>
+            <a href="https://putlockers.fm/search-movies/rick+and+morty.html"> <img src="https://images.justwatch.com/poster/249537954/s332/season-1.webp"/> </a>
+            <a href="https://putlockers.fm/search-movies/James+Roday.html"> <img src="https://images.justwatch.com/poster/34883387/s592/psych.webp"/> </a>
+            
+            <!--
+            <a href="LINK"> <img src="IMG"/> </a>
+            <a href="LINK"> IMG </a>
+            <img src="IMG"/>
+
+                inspect element just watch
+                https://icons8.com/icon/set/button/stickers--black--static--external
+
+                TODO all twith pages?
+
+
+
+            -->
+
+        </div>
+    </div>
+
+    <script>
+        var srchboxG = document.getElementById("GSearch");
+        var srchboxD = document.getElementById("DSearch");
+        var button = document.getElementById("button");
+        var search;
+        var switcher;
+ 
+        // This event is fired when button is clicked
+        button.addEventListener("click", function () {
+            var Gstr = srchboxG.value;
+            var Dstr = srchboxD.value;
+            var toSearch = true;
+            var replaced;
+
+            if (Gstr.length > 0) {
+                replaced = Gstr.split(' ').join('+');
+                replaced = 'https://www.google.ca/search?q=' + replaced;
+            }
+            else if (Dstr.length > 0) {
+                replaced = Dstr.split(' ').join('+');
+                replaced = 'https://duckduckgo.com/?q=' + replaced;
+            }
+            else {
+                toSearch = false;
+            }
+
+            if (toSearch) {
+                console.log(replaced);
+                window.location.href = "" + replaced;
+            }
+        });
+ 
+        searches.addEventListener("keyup", function (event) {
+            // Checking if key pressed is ENTER or not
+            if (event.keyCode == 13) {
+                button.click();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
