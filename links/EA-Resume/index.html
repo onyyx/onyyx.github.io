@@ -1,8 +1,6 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Your Next Hire?!</title>
@@ -14,11 +12,13 @@
         @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /*Follow up*/
         @import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap'); /*headline*/
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');/*text*/
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');/*section headers*/
 
         /* style for tables */
         body {
             height: 100vh; /*maxes out gradient*/
             background-image: linear-gradient(0deg, #252d35, #3c4c4c);
+            background-attachment: fixed;
         }
         #title {
             display: none;
@@ -26,21 +26,54 @@
         #name h1{
             background: -webkit-linear-gradient(#e9d8a6, #ee9b00); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
+        h1{ line-height: 55px; font-size: 55px; font-family: Palanquin; letter-spacing: 4px; text-align: center; margin: 0px; padding: 15px; }
         h2{
             font-size: 29px; font-family: Roboto; text-align: center; margin: 0px; padding: 5px; background: -webkit-linear-gradient(#dee2e6, #ced4da); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
         p{
             color: #ade8f4;
             text-align: center;
+            word-wrap: break-word
         }
         #chart {
-          float: left;
           height: 140px;
-          width: 80px;
+          width: 950px;
           padding: 0 18px;
         }
-    </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        #chart p{
+            text-align: left;
+        }
+        #heders{
+            width:100%; height: 12vw; background-color: #131313; margin: 0px 0px 20px 0px;
+        }
+        #heders h2{
+            font-size: 9vw;
+            font-family: Montserrat;
+            font-weight: 900;
+        }
+        .responsive{
+            width: 49vw;
+        }
+        @media screen and (max-width: 1375px) {
+
+            .responsive{width: 98%;}
+            .responsive p{font-size: 1.8vw;}
+            .cp {width: 85%; height: 33%;}
+            .xp {width: 98%;}
+        }
+        h4{
+            font-size: 34px; color: #e9c46a; font-family: Amaranth; letter-spacing: 2px; text-align: center;
+        }
+        img.animated-gif{
+            width: auto;
+            height: 0.1vw;
+        }
+        td p{
+            text-align: left; padding: 12px;
+        }
+        th h4{ margin: 10px 0px 10px 0px;}
+        .xp table{background: #212529; border:1px solid #eee;}
+    </style>    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 </head>
 <!--
          Github page for onyxrecon
@@ -67,7 +100,8 @@ Contribute to team morale & team health. Encourage others towards positive worki
 
 <body>
     <div class="wrapper">
-        <section>
+        <!--Header-->
+        <section id="headerThing">
 
             <!-- header stuff -->
             <div id="title">
@@ -127,127 +161,243 @@ Contribute to team morale & team health. Encourage others towards positive worki
             </div>
         </section>
 
-        <hr />
+        <!--<hr />-->
         
-        <section>
-            <h2>Beginnings</h2>
+        <!--series progress general talk-->
+        <section id="progression" style="margin: 20px 0px 8vw 0px;">
+    
+            <div id="heders">
+                <h2 style="background-image: url(https://cms.nhl.bamgrid.com/images/photos/332820330/812x542/cut.jpg); background-position: center -120px;">ITS IN THE GAME</h2>
+            </div>
+
             <div id="progress">
-                <div style="width: 50%; background: #212529; float: left; height: 400px;">
-                    <h3 style="font-size: 34px; color: #e9c46a; font-family: Amaranth; letter-spacing: 2px; margin: 30px 4px 10px 10px; text-align: center;">Achievement Progress By Entry</h3>
-                    <p style="font-size: 10px; color: white; font-family: Open-Sans; margin: 20px 20px 20px 20px; text-align: center;">
+                <div class="responsive" style="background: #212529; float: left;">
+                    <p style="font-size: 1.3vw; font-family: Open-Sans; margin: 20px 20px 20px 20px; text-align: center; text-align: left; text-indent: 2em;">
                         I have extensive experience and familiarity with the modes and live service design of the NHL franchise. 
                         From the original "Hold RT to boost", to the development of a more narrative driven mode, 
-                        from trying to trade 4 1st Rounders for Brayden Point, to ridiculously detailed arenas compared to my first SNES days, the NHL franchise continues to forge on. 
+                        from trying to trade 4 1st Rounders for Brayden Point, to ridiculously detailed arenas compared to my first SNES days, the NHL franchise continues to excite. 
                         <br /><br />
-                        Starting with Donkey Kong Country 2 on the SNES, to 9 years and 5,000 hours on Steam across 106 titles, and 12 years on Xbox playing over 270 titles, gaming continues to grow bigger than ever.
+                        Starting with Donkey Kong Country 2 on the SNES, fast forwarding to 2022 with 9 years and 5,000 hours on Steam across 106 titles, and 7700 achievements in 270 titles on Xbox, gaming continues to inspire me.
                         Games that push diversity, accessibility, and leverage cutting edge technical solutions in a live game have seen massive growth. Gamers expect their games to live and breath, and the updates to react to their feedback. 
                         <br /><br />
                         At the same time being a dev has gotten harder than ever. Issues are infinitely more complex and require more man hours to fix, and every flaw and bug will surface on social media at some point. 
-                        In addition third parties are now a major part of gaming, something EA Sports has always had to deal with. 
-
+                        In many ways building a game is a road to the Stanley Cup, from early meetings on who to draft/game design philosophy, mid-season changes, to a strong push out the door.
+                        
                     </p>
                 </div>
-
-            <div id="charts">
-                
-                <div class="twoOne" id="chart" style="margin:0px 0px 15px 40px;">
-                    <p>NHL21</p>
+            <table id="charts" class="responsive" >
+                <!--<h3 style="font-size: 34px; color: #e9c46a; font-family: Amaranth; letter-spacing: 2px; text-align: center;">Achievement Progress By Entry</h3>-->
+                <col>
+                <colgroup span="5"></colgroup>
+                <tr>
+                    <td rowspan="5"></td>
+                    <th colspan="5" scope="colgroup" style="font-size: 34px; color: #e9c46a; font-family: Amaranth; letter-spacing: 2px; text-align: center;">Achievement Progress By Entry</th>
+                </tr>
+                <tr>
+                <td class="twoOne" id="chart" style=" margin-left: auto; margin-right: auto;">
+                    <p>NHL 21:</p>
                     <svg class="progress-ring" width="76" height="76">
                         <circle r="32" cx="38" cy="38" stroke-width="8" stroke="#212529" fill="none" ;=""></circle>
                         <circle id="svgPC" r="32" cx="38" cy="38" style="transform: rotate(-90deg); transform-origin: 50% 50%; stroke-linecap: round; transition: stroke-dashoffset 3s ease 0s; stroke-dashoffset: 90.4779;" stroke="#00afb9" fill="none" stroke-width="8" stroke-dashoffset="201.0619" stroke-dasharray="201.0619"></circle>
                         <text x="38" y="44" style="font: 18px sans-serif; fill: #00afb9" text-anchor="middle" width="76">55%</text>
                     </svg>
-                </div>
+                </td>
 
-                <div class="twoZero" id="chart">
-                    <p>NHL20</p>
+                <td class="twoZero" id="chart">
+                    <p>NHL 20:</p>
                     <svg class="progress-ring" width="76" height="76">
                         <circle r="32" cx="38" cy="38" stroke-width="8" stroke="#212529" fill="none" ;=""></circle>
                         <circle id="svgPC" r="32" cx="38" cy="38" style="transform: rotate(-90deg); transform-origin: 50% 50%; stroke-linecap: round; transition: stroke-dashoffset 3s ease 0s; stroke-dashoffset: 22.1168;" stroke="#00afb9" fill="none" stroke-width="8" stroke-dashoffset="201.0619" stroke-dasharray="201.0619"></circle>
                         <text x="38" y="44" style="font: 18px sans-serif; fill: #00afb9" text-anchor="middle" width="76">89%</text>
                     </svg>
-                </div>
-
-                <div class="oneNine" id="chart">
-                    <p>NHL19</p>
+                </td>
+                <td class="oneNine" id="chart">
+                    <p>NHL 19:</p>
                     <svg class="progress-ring" width="76" height="76">
                         <circle r="32" cx="38" cy="38" stroke-width="8" stroke="#212529" fill="none" ;=""></circle>
                         <circle id="svgPC" r="32" cx="38" cy="38" style="transform: rotate(-90deg); transform-origin: 50% 50%; stroke-linecap: round; transition: stroke-dashoffset 3s ease 0s; stroke-dashoffset: 6.03186;" stroke="#00afb9" fill="none" stroke-width="8" stroke-dashoffset="201.0619" stroke-dasharray="201.0619"></circle>
                         <text x="38" y="44" style="font: 18px sans-serif; fill: #00afb9" text-anchor="middle" width="76">97%</text>
                     </svg>
-                </div>
-                <div class="oneEight" id="chart">
-                    <p>NHL18</p>
+                </td>
+                <td class="oneEight" id="chart">
+                    <p>NHL 18:</p>
                     <svg class="progress-ring" width="76" height="76">
                         <circle r="32" cx="38" cy="38" stroke-width="8" stroke="#212529" fill="none" ;=""></circle>
                         <circle id="svgPC" r="32" cx="38" cy="38" style="transform: rotate(-90deg); transform-origin: 50% 50%; stroke-linecap: round; transition: stroke-dashoffset 3s ease 0s; stroke-dashoffset: 114.605;" stroke="#00afb9" fill="none" stroke-width="8" stroke-dashoffset="201.0619" stroke-dasharray="201.0619"></circle>
                         <text x="38" y="44" style="font: 18px sans-serif; fill: #00afb9" text-anchor="middle" width="76">43%</text>
                     </svg>
-                </div>
-                <div class="oneSeven" id="chart">
-                    <p>NHL17</p>
+                </td>
+                <!--<div class="oneSeven" id="chart">
+                    <p>NHL17:</p>
                     <svg class="progress-ring" width="76" height="76">
                         <circle r="32" cx="38" cy="38" stroke-width="8" stroke="#212529" fill="none" ;=""></circle>
                         <circle id="svgPC" r="32" cx="38" cy="38" style="transform: rotate(-90deg); transform-origin: 50% 50%; stroke-linecap: round; transition: stroke-dashoffset 3s ease 0s; stroke-dashoffset: 199.051;" stroke="#00afb9" fill="none" stroke-width="8" stroke-dashoffset="201.0619" stroke-dasharray="201.0619"></circle>
                         <text x="38" y="44" style="font: 18px sans-serif; fill: #00afb9" text-anchor="middle" width="76">1%</text>
                     </svg>
-                </div>
-                <div class="oneSix" id="chart">
-                    <p>NHL16</p>
+                </div>-->
+                <td class="oneSix" id="chart">
+                    <p>NHL 16:</p>
                     <svg class="progress-ring" width="76" height="76">
                         <circle r="32" cx="38" cy="38" stroke-width="8" stroke="#212529" fill="none" ;=""></circle>
                         <circle id="svgPC" r="32" cx="38" cy="38" style="transform: rotate(-90deg); transform-origin: 50% 50%; stroke-linecap: round; transition: stroke-dashoffset 3s ease 0s; stroke-dashoffset: 191.009;" stroke="#00afb9" fill="none" stroke-width="8" stroke-dashoffset="201.0619" stroke-dasharray="201.0619"></circle>
                         <text x="38" y="44" style="font: 18px sans-serif; fill: #00afb9" text-anchor="middle" width="76">5%</text>
                     </svg>
-                </div>
-                <div class="oneFive" id="chart">
-                    <p>NHL15</p>
+                </td>
+                    </tr>
+
+                <tr>
+                <td class="oneFive" id="chart">
+                    <p>NHL 15:</p>
                     <svg class="progress-ring" width="76" height="76">
                         <circle r="32" cx="38" cy="38" stroke-width="8" stroke="#212529" fill="none" ;=""></circle>
                         <circle id="svgPC" r="32" cx="38" cy="38" style="transform: rotate(-90deg); transform-origin: 50% 50%; stroke-linecap: round; transition: stroke-dashoffset 3s ease 0s; stroke-dashoffset: 195.03;" stroke="#00afb9" fill="none" stroke-width="8" stroke-dashoffset="201.0619" stroke-dasharray="201.0619"></circle>
                         <text x="38" y="44" style="font: 18px sans-serif; fill: #00afb9" text-anchor="middle" width="76">3%</text>
                     </svg>
-                </div>
-                <div class=oneZero" id="chart">
-                    <p>NHL10</p>
+                </td>
+                <td class=oneZero" id="chart">
+                    <p>NHL10:</p>
                     <svg class="progress-ring" width="76" height="76">
                         <circle r="32" cx="38" cy="38" stroke-width="8" stroke="#212529" fill="none" ;=""></circle>
                         <circle id="svgPC" r="32" cx="38" cy="38" style="transform: rotate(-90deg); transform-origin: 50% 50%; stroke-linecap: round; transition: stroke-dashoffset 3s ease 0s; stroke-dashoffset: 156.828;" stroke="#00afb9" fill="none" stroke-width="8" stroke-dashoffset="201.0619" stroke-dasharray="201.0619"></circle>
                         <text x="38" y="44" style="font: 18px sans-serif; fill: #00afb9" text-anchor="middle" width="76">22%</text>
                     </svg>
-                </div>
-                <div class="zeroSeven" id="chart">
-                    <p>NHL07</p>
+                </td>
+                <td class="zeroSeven" id="chart">
+                    <p>NHL 07:</p>
                     <svg class="progress-ring" width="76" height="76">
                         <circle r="32" cx="38" cy="38" stroke-width="8" stroke="#212529" fill="none" ;=""></circle>
                         <circle id="svgPC" r="32" cx="38" cy="38" style="transform: rotate(-90deg); transform-origin: 50% 50%; stroke-linecap: round; transition: stroke-dashoffset 3s ease 0s; stroke-dashoffset: 90.4779;" stroke="#00afb9" fill="none" stroke-width="8" stroke-dashoffset="201.0619" stroke-dasharray="201.0619"></circle>
                         <text x="38" y="44" style="font: 18px sans-serif; fill: #00afb9" text-anchor="middle" width="76">55%</text>
                     </svg>
-                </div>
-                <div class="PSP" id="chart">
-                    <p>NHL07 PSP</p>
+                </td>
+                <td class="PSP" id="chart">
+                    <p>07 PSP:</p>
                     <svg class="progress-ring" width="76" height="76">
                         <circle r="32" cx="38" cy="38" stroke-width="8" stroke="#212529" fill="none" ;=""></circle>
                         <circle id="svgPC" r="32" cx="38" cy="38" style="transform: rotate(-90deg); transform-origin: 50% 50%; stroke-linecap: round; transition: stroke-dashoffset 3s ease 0s; stroke-dashoffset: 0;" stroke="#00afb9" fill="none" stroke-width="8" stroke-dashoffset="201.0619" stroke-dasharray="201.0619"></circle>
                         <text x="38" y="44" style="font: 18px sans-serif; fill: #00afb9" text-anchor="middle" width="76">NA</text>
                     </svg>
-                </div>
-                <div class="SNES" id="chart">
-                    <p>NHL95 SNES</p>
+                </td>
+                <td class="SNES" id="chart">
+                    <p>95 SNES:</p>
                     <svg class="progress-ring" width="76" height="76">
                         <circle r="32" cx="38" cy="38" stroke-width="8" stroke="#212529" fill="none" ;=""></circle>
                         <circle id="svgPC" r="32" cx="38" cy="38" style="transform: rotate(-90deg); transform-origin: 50% 50%; stroke-linecap: round; transition: stroke-dashoffset 3s ease 0s; stroke-dashoffset: 0;" stroke="#00afb9" fill="none" stroke-width="8" stroke-dashoffset="201.0619" stroke-dasharray="201.0619"></circle>
                         <text x="38" y="44" style="font: 18px sans-serif; fill: #00afb9" text-anchor="middle" width="76">NA</text>
                     </svg>
-                </div>
+                </td>
+                    </tr>
+            </table>
             </div>
+        </section>
+        
+        <!--live action experience-->
+        <section style="margin: 20px 0px 11vw 0px;">
+            <div id="heders">
+                <h2 style="background-image: url(http://2.cdn.nhle.com/canucks/images/upload/gallery/2022/04/1239729572_slide.jpg); background-position: center -140px;">LIVE SERVICES</h2>
+            </div>
+            <div id="processEcology" class="responsive xp" style="float: left;">
+                <table>
+                    <tr><th></th><th> <h4 style="float:left;">Emissions Tracking</h4> </th></tr>
+                    <tr>
+                        <td style="max-width:40%;">
+                            <img src="https://processecology.com/img/solutions-diagram/emissions-advisor-diagram.svg" alt="Process Ecology graphic"><p>Process Ecology's Software Cycle</p>
+                            
+                            <img style="display:block; margin-left: auto; margin-right: auto;" src="https://content.thermon.com/images/catadyne/MKII.png" width="100" height="95.3" alt="Heater"><p>An explosion-proof gas heater</p>
+                        </td>
+                        <td style="width:60%;">
+                            <P style="text-align: left; padding: 12px;">
+                                During the pandemic I did contract work for a local company called Process Ecology, essentially monitoring millions of data points, and utilizing the software we were developing to help oil and gas companies reduce their emissions.
+                                Our work allowed companies for the first time to visually track emissions and impacts technologies like solar panels were making in real time.
+                                <br /><br />
+                                ▶ Analyzed and compared our needs and processes to the state of our software and engine to suggest improvements.
+                                <br /><br />
+                                ▶ Used third party software to collect emissions data and lab reports for our clients and integrate them into software.
+                                <br /><br />
+                                <img style="max-width: 8%; height: auto;" src="https://cdn.thomasnet.com/insights-images/19629b75-f78a-4a0c-be16-aaf219f5330c/750px.png" alt="CO2 Molecule">
+                                Scientists state that every area on Earth will see devastation from climate change, reducing emissions is paramount.
+                                <br /><br />
+                                ▶ I worked mostly on methane, however liasoned with people from some of Canada's biggest O&G companies.
+                                <br /><br />
+                                ▶ Worked within a team to reach goals on set dates for environmental reporting to the Canadian, AB and BC governments.
+                            </P>
+                        </td>
+                    </tr>
+                </table>
             </div>
 
-            
-        
+            <div id="forzaTracker" class="responsive xp" style="float: left;">
+                <table>
+                    <tr><th><h4 style="float:right;">Apps I've made 📱</h4></th></tr>
+                    <tr>
+                        <td>
+                            <p>
+                                GOAL: Make an app giving users the ability to track what cars they possess in Microsoft's Forza Horizon 4 (2018), before they added the feature post-launch. 
+                                <br /><br />
+                                ▶ Weekly post-launch updates in anticipation of weekly events in game.
+                                <br /><br />
+                                ▶ Made in unity with C#.
+                                <br /><br />
+                                ▶ Value user data, ensure testing before each patch saved their data due to time to recreate.
+                                <br /><br />
+                                ▶ Respond to user feedback on forums such as Reddit and the app-store in evaluating updates and feature requests.
+                                <br /><br />
+                                RESPONSE: Thousands of downloads (most positive or no complaints). Unfortunately Microsoft requested it taken down, killing the ability to update for users.
+                            </p>
+                        </td>
+                        <td class="animated-gif"><img style="outline-color: #e9c46a; outline-width: 1; outline-style: solid; margin-left: 25px;" src="https://raw.githubusercontent.com/onyyx/onyyx.github.io/master/images/ezgif-2-e3ec75a64f.gif" width="170" height="auto" alt="Gif of app in action"></td>
+                    </tr>
+                    <tr>
+                        <td class="animated-gif"><img style="outline-color: #e9c46a; outline-width: 1; outline-style: solid; float: right; margin-right: 25px;" src="https://raw.githubusercontent.com/onyyx/onyyx.github.io/master/images/ezgif-2-e470a6b840.gif" width="170" height="auto" alt="Gif of app in action"></td>
+                        <td>
+                            <p>
+                                GOAL: A Minesweeper that reacts to users first move, uses industry standard board sizes, and keep track of best times. My first app!
+                                <br /><br />
+                                ▶ Used Unity (mostly C#), Photoshop, and video editor Hitfilm Express.
+                                <br /><br />
+                                ▶ My only actual "game". The twist was that hitting a bomb wouldn't ruin your time, but your best times were based on number of times you "exploded". 
+                                <br /><br />
+                                ▶ It became clear that without the intensity of failure in the gameplay loop, players need other motivation. 
+                                <br /><br />
+                                RESPONSE: Left in beta, I liked playing but features were lacking in a saturated market. 
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                GOAL: Create a concept based on my old Forza app, using a more navigable UI, and more graphics yet can run on low end phones.
+                                <br /><br />
+                                ▶ Uses designs from the game to inspire graphics and create a cohesive experience.
+                                <br /><br />
+                                ▶ Ironically more graphically intense menus than the game (FH4), which uses text when selecting manufacturer. This still holds true in the 5th Forza Horizon (2021).
+                                <br /><br />
+                                RESPONSE: Never released because obviously MS owns the rights to parts of the graphics.
+                            </p>
+                        </td>
+                        <td class="animated-gif"><img style="outline-color: #e9c46a; outline-width: 1; outline-style: solid; margin-left: 25px;" src="https://raw.githubusercontent.com/onyyx/onyyx.github.io/master/images/ezgif-2-4b6da05c1a.gif" width="170" height="auto" alt="Gif of app in action"></td>
+                    </tr>
+                </table>
+                
+            </div>
+            <div id="twitch" class="responsive xp" style="float: left;">
+                <table>
+                    <tr><th><h4 style="float:right;">🔴 Streaming</h4></th></tr>
+
+                </table>
+                
+            </div>
+            <div id="youtube" class="responsive xp" style="float: left;">
+                <table>
+                    <tr> <th></th> <th><h4 style="float:left;">🔴 Streaming</h4></th></tr>
+                </table>>
+            </div>
         </section>
-        <!--series progress-->
-        
+
+        <!--about me-->
+        <section>
+
+        </section>
         
     </div><!--wrapper div closer-->
 
