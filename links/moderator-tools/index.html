@@ -194,7 +194,7 @@
                 <td>onyx fought JLaw</td>
                 <td>!command add !fight ${user} fought ${touser} <br />-$ and curly brackets!-<br />-can do user.name for lowercase-</td>
                 <td>!commands add !fight $(user) fought $(touser)<br />-$ and parentheses!-</td>
-                <td>!addcommand !fight {touser.name} fought {target.name}<br />-curly brackets!-<br />-names go lowercase-</td>
+                <td>!addcommand !fight {touser.name} fought {user.name}<br />-curly brackets!-<br />-names go lowercase-</td>
                 <!-- channel.name is for slobs the streamers name-->
             </tr>
         </table>
@@ -249,37 +249,37 @@
                 <td>Counter</td>
                 <td>${count deaths}</td>
                 <td>$(count hugs)</td>
-                <td>TODOslobs</td>
+                <td>?idk lol?</td>
             </tr>
             <tr>
                 <td>Random number generator</td>
                 <td>${random.1-10}</td>
                 <td>$(eval Math.floor(Math.random() * 10 + 1)) [get rid of the 1 for 0-9]</td>
-                <td>TODOslobs</td>
+                <td>{randnum.1-10}</td>
             </tr>
             <tr>
                 <td>Percent</td>
                 <td>${random.1-100}%</td>
                 <td>$(eval Math.round(Math.random()*100))</td>
-                <td>TODOslobs</td>
+                <td>{randnum.0-100}%</td>
             </tr>
             <tr>
-                <td>Choose between multiple responses [can add more just copy the syntax) </td>
-                <td>${random.pick '1' '2' 'the three'}</td>
-                <td>$(eval const responses = ['no', 'Yes!', 'uhh maybe']; responses[Math.floor(Math.random() * responses.length)];)</td>
-                <td>TODOslobs</td>
+                <td>Choose 1 response </td>
+                <td>${random.pick 'Red' 'Yellow' 'Blue'}</td>
+                <td>$(eval const responses = ['Red', 'Yellow', 'Blue']; responses[Math.floor(Math.random() * responses.length)];)</td>
+                <td>{randchoice.Red | Yellow | Blue }</td>
             </tr>
             <tr>
                 <td>Set Game</td>
                 <td>${setgame "League of Legends"}</td>
                 <td>!game League of Legends</td>
-                <td>TODOslobs</td>
+                <td>ENABLE MOD USAGE IN APP FIRST !setgame League of Legends</td>
             </tr>
             <tr>
                 <td>Random user [ie, for contests or random !fight]</td>
                 <td>${random.chatter}</td>
                 <td>$(urlfetch https://2g.be/twitch/randomviewer.php?channel=$(channel))</td>
-                <td>TODOslobs</td>
+                <td>?idk lol?</td>
             </tr>
         </table>
     </div>
